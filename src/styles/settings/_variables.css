@@ -1,0 +1,36 @@
+:root {
+  /* border-radius */
+  --border-radius-sm: 0.5rem;
+  --border-radius-base: 1rem;
+
+  /* colors */
+  --color-black: oklch(0 0 0);
+  --color-white: oklch(1 0 0);
+  --color-primary-brand: oklch(0.53 0.26 263.42);
+  --color-primary-500: oklch(0.64 0.2 253.54);
+  --color-gray-50: oklch(0.92 0 0);
+  --color-gray-100: oklch(0.88 0 0);
+  --color-gray-200: oklch(0.85 0 0);
+  --color-gray-400: oklch(0.7 0 0);
+  --color-gray-600: oklch(0.45 0 0);
+
+  /* font-family */
+  --font-sans: 'TT Norms', ui-sans-serif, system-ui, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-title: 'Circuit', ui-sans-serif, system-ui, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  /* font-size */
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-6xl: 3.25rem;
+
+  /* line-height */
+  --text-sm--line-height: calc(1.25 / 0.875);
+  --text-base--line-height: 1.5;
+  --text-6xl--line-height: 1.076923;
+
+  /* outline */
+  --outline-width-base: 2px;
+  --outline-offset-width-base: 2px;
+}

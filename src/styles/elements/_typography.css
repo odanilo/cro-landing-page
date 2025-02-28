@@ -1,0 +1,22 @@
+body {
+  color: var(--color-black);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: normal;
+  line-height: var(--text-base--line-height);
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-title);
+  font-weight: bold;
+}
+
+.page-title {
+  font-size: var(--text-6xl);
+  line-height: var(--text-6xl--line-height);
+}
