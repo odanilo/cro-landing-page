@@ -8,11 +8,16 @@
   --color-white: oklch(1 0 0);
   --color-primary-brand: oklch(0.53 0.26 263.42);
   --color-primary-500: oklch(0.64 0.2 253.54);
+  --color-brand-sky: oklch(0.96 0.02 245.94);
   --color-gray-50: oklch(0.92 0 0);
   --color-gray-100: oklch(0.88 0 0);
   --color-gray-200: oklch(0.85 0 0);
   --color-gray-400: oklch(0.7 0 0);
   --color-gray-600: oklch(0.45 0 0);
+
+  /* container */
+  --container-px: 1.5rem;
+  --max-width-container: 77.5rem;
 
   /* font-family */
   --font-sans: 'TT Norms', ui-sans-serif, system-ui, sans-serif,
@@ -29,6 +34,13 @@
   --text-sm--line-height: calc(1.25 / 0.875);
   --text-base--line-height: 1.5;
   --text-6xl--line-height: 1.076923;
+
+  /* section */
+  --section-py: 3rem;
+
+  /* shadow */
+  --shadow-base: 0 2px 4px oklch(0 0 0 / 0.08),
+    0 2px 8px oklch(0.53 0.26 262.64 / 0.08);
 
   /* outline */
   --outline-width-base: 2px;

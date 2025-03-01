@@ -1,4 +1,9 @@
-button:focus {
+button {
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+}
+
+button:where(:focus, :focus-visible),
+.btn:where(:focus, :focus-visible) {
   outline-color: var(--color-primary-500);
   outline-width: var(--outline-width-base);
   outline-style: solid;

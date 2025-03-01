@@ -22,7 +22,95 @@
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
-    <h1>Hello world</h1>
+    <!-- Navigation -->
+    <header class="menu">
+      <div class="menu-wrapper container">
+        <nav class="menu__nav" aria-label="Main Navigation">
+          <ul class="menu__logo no-list">
+            <li class="menu-logo__mobile">
+              <a href="/">
+                <img
+                  src="./images/icon-logo-classpass.svg"
+                  alt="Icon of the Classpass Logo"
+                />
+              </a>
+            </li>
+
+            <li class="menu-logo__desktop">
+              <a href="/">
+                <img
+                  src="./images/logo-classpass.svg"
+                  alt="Icon of the Classpass Logo"
+                />
+              </a>
+            </li>
+          </ul>
+
+          <ul
+            id="menu-pages"
+            class="menu__pages no-list"
+            aria-label="Page Navigation"
+          >
+            <li class="menu-pages__item">
+              <a class="menu-pages__link" href="https://classpass.com/search"
+                >Find classes & appointments</a
+              >
+            </li>
+            <li class="menu-pages__item">
+              <a class="menu-pages__link" href="https://classpass.com/plans"
+                >Plans</a
+              >
+            </li>
+            <li class="menu-pages__item">
+              <a class="menu-pages__link" href="https://classpass.com/features"
+                >How credits work</a
+              >
+            </li>
+            <li class="menu-pages__item">
+              <a
+                class="menu-pages__link"
+                href="https://classpass.com/partners?utm_content=consumer_nav"
+                >List my business</a
+              >
+            </li>
+            <li class="menu-pages__item">
+              <a
+                class="menu-pages__link"
+                href="https://classpass.com/corporate-wellness?utm_content=consumer_nav"
+                >Corporate wellness</a
+              >
+            </li>
+            <li class="menu-pages__item">
+              <a class="menu-pages__link" href="https://classpass.com/login"
+                >Log in</a
+              >
+            </li>
+          </ul>
+
+          <div class="nav__actions">
+            <a
+              href="/pages/sign-up.html"
+              class="btn btn-primary btn--is-navigation"
+              >Sign up now</a
+            >
+
+            <button
+              type="button"
+              class="nav__hamburger hamburger-icon"
+              aria-expanded="false"
+              aria-controls="menu-pages"
+            >
+              <span class="hamburger-icon__line"></span>
+              <span class="hamburger-icon__line"></span>
+              <span class="hamburger-icon__line"></span>
+              <span class="sr-only">Close Menu</span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <h1 class="page-title">Hello world</h1>
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>
