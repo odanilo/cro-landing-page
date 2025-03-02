@@ -25,7 +25,7 @@
     <!-- Navigation -->
     <header class="menu" data-js="menu">
       <div class="menu-wrapper container">
-        <nav class="menu__nav" aria-label="Main Navigation">
+        <nav class="col-md-12 menu__nav" aria-label="Main Navigation">
           <ul class="menu__logo no-list">
             <li class="menu-logo__mobile">
               <a href="/">
@@ -113,8 +113,8 @@
 
     <main>
       <section class="hero-lp">
-        <aside class="hero-lp__aside">
-          <picture>
+        <aside class="row hero-lp__aside">
+          <picture class="col-start-7 col-md-6 hero-lp__picture">
             <source
               srcset="./images/hero-desktop.jpg"
               media="(min-width: 48rem)"
@@ -126,47 +126,53 @@
           </picture>
         </aside>
 
-        <div class="hero-lp__content section container flow">
-          <h1 class="page-title">
-            You’re invited to the 2025 ClassPass Pickleball Classic
-          </h1>
+        <div class="hero-lp__main container align-center">
+          <div class="col-md-5 hero-lp__content section flow">
+            <h1 class="page-title">
+              You’re invited to the 2025 ClassPass Pickleball Classic
+            </h1>
 
-          <p>
-            Pickleball is having a moment, and we’re bringing the heat! To
-            compete or just rally for fun, join the first ever ClassPass
-            Pickleball Classic to have fast-paced matches, great vibes, and a
-            day of game-time energy. Ready to play?
-          </p>
+            <p>
+              Pickleball is having a moment, and we’re bringing the heat! To
+              compete or just rally for fun, join the first ever ClassPass
+              Pickleball Classic to have fast-paced matches, great vibes, and a
+              day of game-time energy. Ready to play?
+            </p>
 
-          <div class="hero-lp__actions action-row">
-            <a href="/pages/sign-up.html" class="btn btn-primary"
-              >Sign up now</a
-            >
+            <div class="hero-lp__actions action-row">
+              <a href="/pages/sign-up.html" class="btn btn-primary"
+                >Sign up now</a
+              >
 
-            <a
-              href="#what-expect"
-              class="btn btn-primary btn-primary--is-outline"
-              >Learn more</a
-            >
+              <a
+                href="#what-expect"
+                class="btn btn-primary btn-primary--is-outline"
+                >Learn more</a
+              >
+            </div>
           </div>
+
+          <div class="col-md-6 col-start-7 hero-lp__aside-placeholder"></div>
         </div>
       </section>
     </main>
 
     <footer>
       <section class="cta-fold section">
-        <div class="cta-fold-wrapper container flow">
-          <h2 class="section-title">Don't miss out</h2>
+        <div class="cta-fold-wrapper container">
+          <div class="col-md-12 flow">
+            <h2 class="section-title">Don't miss out</h2>
 
-          <p>
-            Join the waitlist below to sign up for more event updates and get
-            closer to securing your spot.
-          </p>
+            <p>
+              Join the waitlist below to sign up for more event updates and get
+              closer to securing your spot.
+            </p>
 
-          <div class="cta-fold__actions action-row">
-            <a href="/pages/sign-up.html" class="btn btn-primary"
-              >Sign up now</a
-            >
+            <div class="cta-fold__actions action-row">
+              <a href="/pages/sign-up.html" class="btn btn-primary"
+                >Sign up now</a
+              >
+            </div>
           </div>
         </div>
       </section>

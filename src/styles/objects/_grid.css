@@ -1,21 +1,7 @@
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: var(--max-width-container);
-  padding-left: var(--container-px);
-  padding-right: var(--container-px);
-}
-
+/****** SECTIONS ******/
 .section {
   padding-bottom: var(--section-py);
   padding-top: var(--section-py);
-}
-
-.row {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr auto;
-  column-gap: 1rem;
 }
 
 .action-row {
@@ -23,4 +9,116 @@
   flex-wrap: wrap;
   gap: var(--spacing-xs);
   --flow-spacing: var(--spacing-2xl);
+}
+
+/****** CUSTOM GRID BOOTSTRAP INSPIRED ******/
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-base);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width-container);
+  padding-left: var(--container-px);
+  padding-right: var(--container-px);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-base);
+  width: 100%;
+}
+
+[class^='col-'] {
+  grid-column: span 12;
+}
+
+.col-start-7 {
+  grid-column-start: 67;
+}
+
+@media (min-width: 48rem) {
+  .col-md-1 {
+    grid-column: span 1;
+  }
+
+  .col-md-2 {
+    grid-column: span 2;
+  }
+
+  .col-md-3 {
+    grid-column: span 3;
+  }
+
+  .col-md-4 {
+    grid-column: span 4;
+  }
+
+  .col-md-5 {
+    grid-column: span 5;
+  }
+
+  .col-md-6 {
+    grid-column: span 6;
+  }
+
+  .col-md-7 {
+    grid-column: span 7;
+  }
+
+  .col-md-8 {
+    grid-column: span 8;
+  }
+
+  .col-md-9 {
+    grid-column: span 9;
+  }
+
+  .col-md-10 {
+    grid-column: span 10;
+  }
+
+  .col-md-11 {
+    grid-column: span 11;
+  }
+
+  .col-md-12 {
+    grid-column: span 12;
+  }
+
+  .col-start-7.col-md-6 {
+    grid-column: 7 / span 6;
+  }
+}
+
+/****** POSITION HELPERS ******/
+.justify-start {
+  justify-content: start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.align-start {
+  align-items: start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: end;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }

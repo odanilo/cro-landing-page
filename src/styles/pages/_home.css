@@ -27,16 +27,30 @@
 
 @media (min-width: 48rem) {
   .hero-lp {
+    display: flex;
+  }
+
+  .hero-lp__picture {
+    overflow: hidden;
   }
 
   .hero-lp__aside {
-    display: none;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+  }
+
+  .hero-lp__aside img {
+    height: 100%;
+    object-fit: cover;
+    object-position: left top;
+    width: 100%;
   }
 
   .hero-lp__content {
-    padding-bottom: var(--section-py);
-    padding-top: var(--section-py);
     order: -1;
+    padding-top: var(--section-py);
+    position: relative;
   }
 
   .cta-fold {
@@ -45,5 +59,9 @@
 
   .cta-fold__actions {
     justify-content: center;
+  }
+
+  .hero-lp__aside-placeholder {
+    aspect-ratio: 1338 / 1578;
   }
 }
