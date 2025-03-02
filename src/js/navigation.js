@@ -33,5 +33,5 @@ export function createNavigation(menuSelector = '[data-js="menu"]') {
     $menuControlLabel.textContent = getControlLabel();
   };
 
-  $menu.addEventListener('click', toggleNavigation);
+  $menuControl.addEventListener('click', toggleNavigation);
 }

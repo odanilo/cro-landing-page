@@ -98,6 +98,7 @@ body:has(.hamburger-icon[aria-expanded='true']) {
   align-items: center;
   background-color: transparent;
   border: none;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   gap: 0.3125rem;
