@@ -63,3 +63,9 @@
   --outline-width-base: 2px;
   --outline-offset-width-base: 2px;
 }
+
+@media (min-width: 48rem) {
+  :root {
+    --section-py: 6.25rem;
+  }
+}

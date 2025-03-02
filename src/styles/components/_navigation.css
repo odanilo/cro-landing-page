@@ -16,6 +16,7 @@ body:has(.hamburger-icon[aria-expanded='true']) {
   padding-top: var(--menu-py);
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 .menu__nav {

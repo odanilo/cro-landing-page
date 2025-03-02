@@ -1,15 +1,49 @@
+/****** HERO SECTION ******/
+.hero-lp {
+  position: relative;
+}
+
+.hero-lp__content {
+  padding-top: 2rem;
+}
+
+.hero-lp__actions > * {
+  display: flex;
+  width: 100%;
+}
+
+@media (min-width: 48rem) {
+  .hero-lp__actions > * {
+    display: inline-flex;
+    width: unset;
+  }
+}
+
 /****** CTA FOLD ******/
 .cta-fold {
   background-color: var(--color-black);
   color: var(--color-white);
 }
 
-.cta-fold__actions {
-  --flow-spacing: var(--spacing-2xl);
-}
-
 @media (min-width: 48rem) {
+  .hero-lp {
+  }
+
+  .hero-lp__aside {
+    display: none;
+  }
+
+  .hero-lp__content {
+    padding-bottom: var(--section-py);
+    padding-top: var(--section-py);
+    order: -1;
+  }
+
   .cta-fold {
     text-align: center;
+  }
+
+  .cta-fold__actions {
+    justify-content: center;
   }
 }
