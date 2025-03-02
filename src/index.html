@@ -3,14 +3,14 @@
   <head>
     <link
       rel="preload"
-      href="fonts/TTNorms-Regular.woff2"
+      href="fonts/tt-norms/TTNorms-Regular.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href="fonts/Circuit.woff2"
+      href="fonts/circuit/Circuit.woff2"
       as="font"
       type="font/woff2"
       crossorigin
@@ -23,7 +23,7 @@
   </head>
   <body>
     <!-- Navigation -->
-    <header class="menu">
+    <header class="menu" data-js="menu">
       <div class="menu-wrapper container">
         <nav class="menu__nav" aria-label="Main Navigation">
           <ul class="menu__logo no-list">
@@ -99,11 +99,12 @@
               class="nav__hamburger hamburger-icon"
               aria-expanded="false"
               aria-controls="menu-pages"
+              data-js="mobile-menu-control"
             >
               <span class="hamburger-icon__line"></span>
               <span class="hamburger-icon__line"></span>
               <span class="hamburger-icon__line"></span>
-              <span class="sr-only">Close Menu</span>
+              <span class="sr-only" data-js="mobile-menu-label">Open menu</span>
             </button>
           </div>
         </nav>

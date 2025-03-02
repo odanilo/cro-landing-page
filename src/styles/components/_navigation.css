@@ -36,18 +36,24 @@ body:has(.hamburger-icon[aria-expanded='true']) {
 
 .menu__pages {
   background-color: var(--color-white);
-  display: none;
   height: calc(100vh - var(--menu-height));
   left: 0;
+  opacity: 0;
   overflow: auto;
   position: absolute;
   right: 0;
   top: 100%;
+  transform: translate(0, -2%);
+  transition: transform 0.2s ease-in, visibility 0.2s ease-in,
+    opacity 0.2s ease-in;
+  visibility: hidden;
   z-index: 1;
 }
 
-.menu__pages--is-open {
-  display: revert;
+.menu__pages:has(+ .nav__actions .hamburger-icon[aria-expanded='true']) {
+  opacity: 1;
+  transform: translate(0, 0);
+  visibility: visible;
 }
 
 .menu-pages__item {
@@ -170,8 +176,12 @@ body:has(.hamburger-icon[aria-expanded='true']) {
     flex-wrap: wrap;
     height: unset;
     margin-left: auto;
+    opacity: 1;
     position: relative;
     top: unset;
+    transition: none;
+    transform: translate(0, 0);
+    visibility: visible;
   }
 
   .menu-pages__item + .menu-pages__item::before {
