@@ -1,0 +1,15 @@
+/****** CTA FOLD ******/
+.cta-fold {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.cta-fold__actions {
+  --flow-spacing: var(--spacing-2xl);
+}
+
+@media (min-width: 48rem) {
+  .cta-fold {
+    text-align: center;
+  }
+}

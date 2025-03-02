@@ -25,14 +25,31 @@
   --font-title: 'Circuit', ui-sans-serif, system-ui, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
+  /* spacing */
+  --spacing-xs: 0.75rem;
+  --spacing-sm: 0.875rem;
+  --spacing-base: 1rem;
+  --spacing-2xl: 1.5rem;
+  --spacing-3xl: 1.75rem;
+  --spacing-4xl: 2.25rem;
+  --spacing-6xl: 3.25rem;
+
   /* font-size */
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-6xl: 3.25rem;
+  --text-xs: var(--spacing-xs);
+  --text-sm: var(--spacing-sm);
+  --text-base: var(--spacing-base);
+  --text-2xl: var(--spacing-2xl);
+  --text-3xl: var(--spacing-3xl);
+  --text-4xl: var(--spacing-4xl);
+  --text-6xl: var(--spacing-6xl);
 
   /* line-height */
+  --text-xs--line-height: calc(1 / 0.75);
   --text-sm--line-height: calc(1.25 / 0.875);
   --text-base--line-height: 1.5;
+  --text-2xl--line-height: calc(2 / 1.5);
+  --text-3xl--line-height: calc(2.25 / 1.75);
+  --text-4xl--line-height: calc(2.5 / 2.25);
   --text-6xl--line-height: 1.076923;
 
   /* section */
