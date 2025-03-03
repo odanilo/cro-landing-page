@@ -1,0 +1,26 @@
+.logo-picker {
+  overflow: hidden;
+  --list-x-offset: 0;
+}
+
+.logo-picker__list {
+  animation-timing-function: ease-in-out;
+  display: flex;
+  gap: 4.375rem;
+  transform: translate(var(--list-x-offset, 0), 0);
+  will-change: transform;
+}
+
+.logo-picker__item {
+  flex-shrink: 0;
+}
+
+.logo-picker__item > img {
+  max-height: 1.75rem;
+}
+
+@media (min-width: 48rem) {
+  .logo-picker__list {
+    gap: 5.125rem;
+  }
+}

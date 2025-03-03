@@ -12,5 +12,6 @@
 @import url('./objects/_grid.css');
 
 @import url('./components/_navigation.css');
+@import url('./components/_logo-picker.css');
 
 @import url('./pages/_home.css');

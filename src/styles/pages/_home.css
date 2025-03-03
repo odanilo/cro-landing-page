@@ -65,3 +65,17 @@
     aspect-ratio: 1338 / 1578;
   }
 }
+
+/****** LOGO PICKER ******/
+.logo-picker {
+  background-color: var(--color-brand-sky-500);
+  padding-left: var(--container-px);
+  padding-right: var(--container-px);
+}
+
+@media (min-width: 48rem) {
+  .logo-picker {
+    padding-bottom: 2.6875rem;
+    padding-top: 2.6875rem;
+  }
+}
