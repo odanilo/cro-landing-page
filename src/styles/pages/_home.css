@@ -4,7 +4,7 @@
 }
 
 .hero-lp__content {
-  padding-top: 2rem;
+  padding-top: var(--spacing-4xl);
 }
 
 .hero-lp__actions > * {
@@ -12,20 +12,16 @@
   width: 100%;
 }
 
+.hero-lp__aside-placeholder {
+  display: none;
+}
+
 @media (min-width: 48rem) {
   .hero-lp__actions > * {
     display: inline-flex;
     width: unset;
   }
-}
 
-/****** CTA FOLD ******/
-.cta-fold {
-  background-color: var(--color-black);
-  color: var(--color-white);
-}
-
-@media (min-width: 48rem) {
   .hero-lp {
     display: flex;
   }
@@ -53,16 +49,25 @@
     position: relative;
   }
 
+  .hero-lp__aside-placeholder {
+    aspect-ratio: 1338 / 1578;
+    display: revert;
+  }
+}
+
+/****** CTA FOLD ******/
+.cta-fold {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+@media (min-width: 48rem) {
   .cta-fold {
     text-align: center;
   }
 
   .cta-fold__actions {
     justify-content: center;
-  }
-
-  .hero-lp__aside-placeholder {
-    aspect-ratio: 1338 / 1578;
   }
 }
 
@@ -86,7 +91,7 @@
 }
 
 .expect__card-list {
-  margin-top: 2rem;
+  margin-top: var(--spacing-4xl);
 }
 
 @media (min-width: 48rem) {
@@ -96,5 +101,80 @@
 
   .expect__card-list {
     margin-top: 3rem;
+  }
+}
+
+/****** SCHEDULE ******/
+.schedule {
+  background-color: var(--color-white);
+  padding-top: 0;
+  position: relative;
+}
+
+.schedule__illustration img {
+  width: 100%;
+}
+
+.schedule__content {
+  margin-top: var(--spacing-4xl);
+}
+
+.schedule__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
+}
+
+.schedule-list__item {
+  display: flex;
+  gap: var(--spacing-xl);
+}
+
+.schedule-list__time {
+  flex-basis: 50%;
+  flex-shrink: 0;
+  font-weight: 500;
+  max-width: 100px;
+}
+
+.schedule__table tr {
+  border-top: solid 1px red;
+  padding: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .schedule {
+    padding-top: var(--section-py);
+  }
+
+  .schedule__illustration {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .schedule__illustration picture {
+    height: 100%;
+  }
+
+  .schedule__illustration img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .schedule__content {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-base);
+    margin-top: 0;
+    min-width: 31.25rem;
+    padding: 3rem;
+    position: relative;
+  }
+
+  .schedule__title {
+    text-align: center;
   }
 }

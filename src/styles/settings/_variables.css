@@ -34,7 +34,9 @@
   --spacing-xl: 1.25rem;
   --spacing-2xl: 1.5rem;
   --spacing-3xl: 1.75rem;
-  --spacing-4xl: 2.25rem;
+  --spacing-4xl: 2rem;
+  --spacing-5xl: 2.25rem;
+  
   --spacing-6xl: 3.25rem;
 
   /* font-size */
@@ -44,7 +46,7 @@
   --text-xl: var(--spacing-xl);
   --text-2xl: var(--spacing-2xl);
   --text-3xl: var(--spacing-3xl);
-  --text-4xl: var(--spacing-4xl);
+  --text-4xl: var(--spacing-5xl);
   --text-6xl: var(--spacing-6xl);
 
   /* line-height */

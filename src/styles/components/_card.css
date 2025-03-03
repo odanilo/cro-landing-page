@@ -1,6 +1,6 @@
 .card-grid {
   display: grid;
-  grid-gap: var(--card-grid-gap, 2rem);
+  grid-gap: var(--card-grid-gap, var(--spacing-4xl));
   grid-template-columns: repeat(
     auto-fit,
     minmax(var(--min-card-width, 192px), 1fr)

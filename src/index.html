@@ -122,6 +122,7 @@
             <img
               src="./images/hero-mobile.jpg"
               alt="Grid showing people enjoying sport with nature and close-ups of sports equipment"
+              loading="lazy"
             />
           </picture>
         </aside>
@@ -216,9 +217,7 @@
       >
         <div class="what-expect-wrapper container">
           <header class="col-md-12 expect__header flow">
-            <h2 id="logo-picker-heading" class="section-title">
-              What to expect
-            </h2>
+            <h2 id="expect-heading" class="section-title">What to expect</h2>
 
             <p>
               The day will be filled with plenty of fun and action. Here’s what
@@ -334,6 +333,102 @@
               </article>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section
+        id="events-schedule"
+        class="schedule section"
+        aria-labelledby="schedule-heading"
+      >
+        <div class="col-md-12 schedule__illustration">
+          <picture>
+            <source
+              srcset="./images/bg-schedule-section-1500px.jpg"
+              media="(min-width: 48rem)"
+            />
+            <img
+              src="./images/bg-schedule-section.jpg"
+              alt="Close-up of a blue pickleball court with white lines"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+
+        <div class="container">
+          <div class="col-start-4 col-md-6 schedule__content flow">
+            <h2 id=" schedule-heading" class="schedule__title section-title">
+              Schedule of events
+            </h2>
+
+            <ol class="schedule__list no-list">
+              <li class="schedule-list__item">
+                <span class="schedule-list__time"
+                  ><time datetime="08:00">8:00 AM</time></span
+                >
+                <span class="schedule-list__activity"
+                  >Check-in & warm-up courts open</span
+                >
+              </li>
+
+              <li class="schedule-list__item">
+                <span class="schedule-list__time"
+                  ><time datetime="09:00">9:00 AM</time></span
+                >
+                <span class="schedule-list__activity"
+                  >Opening ceremony & player briefing</span
+                >
+              </li>
+
+              <li class="schedule-list__item">
+                <span class="schedule-list__time"
+                  ><time datetime="09:30">9:30 AM</time></span
+                >
+                <span class="schedule-list__activity"
+                  >Tournament kickoff—round 1</span
+                >
+              </li>
+
+              <li class="schedule-list__item">
+                <span class="schedule-list__time"
+                  ><time datetime="12:00">12:00 PM</time></span
+                >
+                <span class="schedule-list__activity"
+                  >Lunch break & dj set</span
+                >
+              </li>
+
+              <li class="schedule-list__item">
+                <span class="schedule-list__time"
+                  ><time datetime="13:00">1:00 PM</time></span
+                >
+                <span class="schedule-list__activity"
+                  >Quarterfinal matches</span
+                >
+              </li>
+
+              <li class="schedule-list__item">
+                <span class="schedule-list__time"
+                  ><time datetime="14:30">2:30 PM</time></span
+                >
+                <span class="schedule-list__activity">Semifinals</span>
+              </li>
+
+              <li class="schedule-list__item">
+                <span class="schedule-list__time"
+                  ><time datetime="16:00">4:00 PM</time></span
+                >
+                <span class="schedule-list__activity">Championship match</span>
+              </li>
+
+              <li class="schedule-list__item">
+                <span class="schedule-list__time"
+                  ><time datetime="17:00">5:00 PM</time></span
+                >
+                <span class="schedule-list__activity">Awards ceremony</span>
+              </li>
+            </ol>
+          </div>
         </div>
       </section>
     </main>
