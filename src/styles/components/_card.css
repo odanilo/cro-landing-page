@@ -1,0 +1,46 @@
+.card-grid {
+  display: grid;
+  grid-gap: var(--card-grid-gap, 2rem);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--min-card-width, 192px), 1fr)
+  );
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-gap, var(--spacing-xs));
+}
+
+.card__featured-image {
+  border-radius: var(--border-radius-xs);
+  overflow: hidden;
+  width: 100%;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-gap, var(--spacing-xs));
+}
+
+.card__title {
+  font-size: var(--text-xl);
+  font-weight: bold;
+}
+
+.card__link {
+  color: var(--color-black);
+  font-weight: 500;
+}
+
+.card--has-bg {
+  background-color: var(--card-bg, var(--color-white));
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-xl);
+}
+
+.card--has-shadow {
+  box-shadow: var(--shadow-lg);
+}

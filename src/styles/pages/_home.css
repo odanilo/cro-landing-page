@@ -79,3 +79,22 @@
     padding-top: 2.6875rem;
   }
 }
+
+/****** WHAT EXPECT ******/
+.expect {
+  background-color: var(--color-white);
+}
+
+.expect__card-list {
+  margin-top: 2rem;
+}
+
+@media (min-width: 48rem) {
+  .expect__header {
+    text-align: center;
+  }
+
+  .expect__card-list {
+    margin-top: 3rem;
+  }
+}
