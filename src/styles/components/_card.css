@@ -14,7 +14,8 @@
 }
 
 .card__featured-image {
-  border-radius: var(--border-radius-xs);
+  border-radius: var(--border-radius-base);
+  object-fit: cover;
   overflow: hidden;
   width: 100%;
 }
@@ -43,4 +44,37 @@
 
 .card--has-shadow {
   box-shadow: var(--shadow-lg);
+}
+
+*:has(.card) {
+  container-type: inline-size;
+}
+
+@container (min-width: 30rem) {
+  .card {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: var(--spacing-base);
+    width: 100%;
+  }
+
+  .card__content {
+    grid-column: span 4;
+    order: -1;
+  }
+
+  .card__image-wrapper {
+    grid-column: 6 / -1;
+  }
+}
+
+@container (min-width: 50rem) {
+  .card__content {
+    grid-column: span 3;
+  }
+
+  .card__image-wrapper {
+    grid-column: 5 / -1;
+  }
 }

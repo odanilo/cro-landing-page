@@ -178,3 +178,42 @@
     text-align: center;
   }
 }
+
+/****** SPONSORS ******/
+.sponsors {
+  background-color: var(--color-gray-10);
+}
+
+.sponsors__main {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--spacing-4xl);
+}
+
+.sponsors__content {
+  margin-top: var(--spacing-4xl);
+}
+
+.card__featured-image {
+  aspect-ratio: 353 / 238;
+}
+
+@container (min-width: 40rem) {
+  .card__featured-image {
+    aspect-ratio: 793 / 333;
+  }
+}
+
+@media (min-width: 48rem) {
+  .sponsors__header {
+    text-align: center;
+  }
+
+  .sponsors__main {
+    margin-top: 3rem;
+  }
+
+  .sponsors__content {
+    margin-top: 3rem;
+  }
+}
