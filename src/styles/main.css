@@ -8,6 +8,7 @@
 @import url('./elements/_base.css');
 @import url('./elements/_typography.css');
 @import url('./elements/_buttons.css');
+@import url('./elements/_form.css');
 
 @import url('./objects/_grid.css');
 
@@ -16,4 +17,5 @@
 @import url('./components/_card.css');
 @import url('./components/_tab.css');
 
+@import url('./pages/_sign-up.css');
 @import url('./pages/_home.css');

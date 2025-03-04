@@ -1,0 +1,186 @@
+form fieldset {
+  border: 0;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: var(--spacing-xl);
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+form fieldset + fieldset {
+  margin-top: var(--spacing-xl);
+}
+
+.form-field {
+  flex-shrink: 0;
+  position: relative;
+  width: 100%;
+}
+
+/***** GENERAL INPUTS *****/
+form input[type='text'],
+form input[type='search'],
+form input[type='email'],
+form input[type='password'],
+form input[type='tel'],
+form input[type='number'],
+form input[type='file'],
+form select,
+form textarea {
+  background-color: var(--bg-inputs);
+  border: 1px solid var(--color-gray-250);
+  border-radius: var(--border-radius-2xs);
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  padding: var(--spacing-xs);
+  width: 100%;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form input:where(:focus, :focus-visible),
+form select:where(:focus, :focus-visible),
+form textarea:where(:focus, :focus-visible) {
+  outline-color: var(--color-primary-500);
+}
+
+form label {
+  color: var(--color-gray-450);
+  font-size: var(--text-xs);
+}
+
+.form-field:focus-within label {
+  color: var(--color-primary-brand);
+}
+
+.float-label {
+  left: var(--spacing-xs);
+  padding: 0 0.125rem;
+  position: absolute;
+  top: 0;
+  transform: translate(0, -50%);
+}
+
+.float-label:before {
+  background: var(--label-bg, var(--color-white));
+  content: '';
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: -1;
+}
+
+*:focus-within > .float-label:before {
+  height: 2px;
+}
+
+/***** CHECKBOX *****/
+form input[type='checkbox'] {
+  appearance: none;
+  border: solid 1px var(--color-gray-50);
+  border-radius: 5px;
+  flex-shrink: 0;
+  height: var(--spacing-2xl);
+  position: relative;
+  width: var(--spacing-2xl);
+}
+
+form input[type='checkbox']:checked {
+  background-color: var(--color-primary-brand);
+  border-color: var(--color-primary-500);
+}
+
+form input[type='checkbox']::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="%23fff" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>');
+  background-position: center;
+  background-size: var(--spacing-xl) var(--spacing-xl);
+  border-radius: 50%;
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fieldset--is-checkbox .form-field {
+  align-items: flex-start;
+  display: flex;
+  gap: var(--spacing-2xs);
+  line-height: var(--spacing-xl);
+}
+
+.fieldset--is-checkbox label {
+  color: var(--color-black);
+  transform: translate(0, -0.25em);
+}
+
+.fieldset--is-checkbox:focus-within label {
+  color: revert;
+}
+
+/***** SELECT *****/
+form select {
+  appearance: none;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="%235A6272" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>');
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding-right: 30px;
+}
+
+.select--is-open {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="%235A6272" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" /></svg>');
+}
+
+form select option {
+  font-family: var(--font-sans);
+  padding: var(--spacing-xs) var(--spacing-base);
+}
+
+.select--is-placeholder {
+  color: var(--color-gray-450);
+}
+
+.select--is-placeholder option {
+  color: var(--color-black);
+}
+
+/***** LEGAL WARNING *****/
+.form__legal {
+  color: var(--color-gray-450);
+  font-size: var(--text-xs);
+  line-height: var(--spacing-xl);
+  margin-top: var(--spacing-base);
+}
+
+.form__legal a {
+  font-weight: 500;
+}
+
+/***** ACTIONS *****/
+.form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-xl);
+}
+
+@media (min-width: 48rem) {
+  .fieldset--has-2-coluns {
+    display: flex;
+    gap: var(--spacing-4xl);
+  }
+
+  .form-field {
+    flex: 1;
+  }
+}

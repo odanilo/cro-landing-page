@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="preload"
+      href="../fonts/tt-norms/TTNorms-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="../fonts/circuit/Circuit.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Thank you for signing up for the 2025 ClassPass Pickleball Classic |
+      ClassPass
+    </title>
+
+    <link rel="stylesheet" href="../styles/main.css" />
+  </head>
+  <body class="sp section--has-full-vh">
+    <!-- Navigation -->
+    <header class="menu" data-js="menu">
+      <div class="menu-wrapper container">
+        <nav class="col-md-12 menu__nav" aria-label="Main Navigation">
+          <ul class="menu__logo no-list">
+            <li class="menu-logo__mobile">
+              <a href="/">
+                <img
+                  src="../images/icon-logo-classpass.svg"
+                  alt="Icon of the Classpass Logo"
+                />
+              </a>
+            </li>
+
+            <li class="menu-logo__desktop">
+              <a href="/">
+                <img
+                  src="../images/logo-classpass.svg"
+                  alt="Icon of the Classpass Logo"
+                />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="sp__main">
+      <section class="sp__hero container section text-center flow">
+        <h1 class="col-md-12 page-title">Let’s do this</h1>
+
+        <p class="col-md-12">
+          Thank you for your interest in the 2025 ClassPass Pickleball Classic.
+          Submit your details below to join the waitlist.
+        </p>
+      </section>
+
+      <section class="sp-form container" aria-labelledby="form-heading">
+        <div class="col-md-6 sp-form-wrapper card--has-bg card--has-shadow">
+          <header class="sp-form__header flow">
+            <h2 id="form-description" id="form-heading" class="sp-form__title">
+              Contact information
+            </h2>
+
+            <p>
+              The information below will be used to contact you with event
+              updates and to let you know your status on the waitlist.
+            </p>
+          </header>
+
+          <form
+            class="form sp__form"
+            action="./thank-you.html"
+            aria-labelledby="form-heading"
+            aria-describedby="form-description"
+          >
+            <fieldset class="fieldset--has-2-coluns">
+              <div class="form-field">
+                <label class="float-label" for="first-name"
+                  >First name<span class="form__required-symbol">*</span>
+                  <span class="sr-only">(Required)</span></label
+                >
+                <input
+                  type="text"
+                  name="first-name"
+                  id="first-name"
+                  required
+                  aria-required="true"
+                  autocomplete="given-name"
+                />
+              </div>
+
+              <div class="form-field">
+                <label class="float-label" for="last-name"
+                  >Last name<span class="form__required-symbol">*</span>
+                  <span class="sr-only">(Required)</span></label
+                >
+                <input
+                  type="text"
+                  name="last-name"
+                  id="last-name"
+                  required
+                  aria-required="true"
+                  autocomplete="family-name"
+                />
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <div class="form-field">
+                <label class="float-label" for="phone"
+                  >Phone number<span class="form__required-symbol">*</span>
+                  <span class="sr-only">(Required)</span></label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  aria-required="true"
+                  autocomplete="tel"
+                />
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <div class="form-field">
+                <label class="float-label" for="email"
+                  >Email address<span class="form__required-symbol">*</span>
+                  <span class="sr-only">(Required)</span></label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  aria-required="true"
+                  autocomplete="email"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                />
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <div class="form-field">
+                <label class="float-label" for="experience-level"
+                  >Pickleball experience level<span
+                    class="form__required-symbol"
+                    >*</span
+                  >
+                  <span class="sr-only">(Required)</span></label
+                >
+                <select
+                  id="experience-level"
+                  name="experience-level"
+                  required
+                  aria-required="true"
+                >
+                  <option value="" selected disabled>Please select</option>
+                  <option value="novice">Novice</option>
+                  <option value="beginner">Beginner</option>
+                  <option value="intermediate">Intermediate</option>
+                  <option value="advanced">Advanced</option>
+                </select>
+              </div>
+            </fieldset>
+
+            <fieldset class="fieldset--is-checkbox">
+              <div class="form-field">
+                <input
+                  type="checkbox"
+                  id="terms-agreement"
+                  name="terms-agreement"
+                  required
+                  aria-required="true"
+                />
+                <label for="terms-agreement">
+                  <p>
+                    I agree to receive marketing and other communications from
+                    ClassPass and its group companies.
+                    <span class="required" aria-hidden="true">*</span>
+                    <span class="sr-only">(Required)</span>
+                  </p>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form__legal">
+              You can unsubscribe from these communications at any time. For
+              more information, please review our
+              <a
+                href="https://classpass.com/terms/bra"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Terms of Use</a
+              >
+              and
+              <a
+                href="https://classpass.com/privacy/bra"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Privacy Policy</a
+              >.
+            </div>
+
+            <div class="form__actions">
+              <button
+                type="submit"
+                class="btn btn-primary btn--is-full"
+                aria-label="Join Pickleball Classic Waitlist"
+              >
+                Join waitlist
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <aside class="col-md-6 sp-form__aside">
+          <figure class="sp-form-aside__figure">
+            <img
+              src="../images/sign-up-hero.jpg"
+              alt="A woman playing pickleball on an outdoor court during daytime. She is wearing a light blue sports skirt and a matching top, holding a black pickleball paddle in her right hand while smiling. The net is in the foreground, slightly blurred, and the background features a clear blue sky, metal fences, and urban buildings."
+            />
+          </figure>
+        </aside>
+      </section>
+    </main>
+
+    <script src="../js/dropdown.js"></script>
+  </body>
+</html>

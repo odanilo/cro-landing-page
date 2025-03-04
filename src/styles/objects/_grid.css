@@ -11,6 +11,10 @@
   --flow-spacing: var(--spacing-2xl);
 }
 
+.section--has-full-vh {
+  min-height: 100vh;
+}
+
 /****** CUSTOM GRID BOOTSTRAP INSPIRED ******/
 .container {
   display: grid;

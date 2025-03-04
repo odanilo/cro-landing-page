@@ -100,7 +100,7 @@
   }
 
   .expect__card-list {
-    margin-top: 3rem;
+    margin-top: var(--spacing-6xl);
   }
 }
 
@@ -170,7 +170,7 @@
     border-radius: var(--border-radius-base);
     margin-top: 0;
     min-width: 31.25rem;
-    padding: 3rem;
+    padding: var(--spacing-6xl);
     position: relative;
   }
 
@@ -210,10 +210,10 @@
   }
 
   .sponsors__main {
-    margin-top: 3rem;
+    margin-top: var(--spacing-6xl);
   }
 
   .sponsors__content {
-    margin-top: 3rem;
+    margin-top: var(--spacing-6xl);
   }
 }

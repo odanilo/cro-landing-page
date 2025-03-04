@@ -46,7 +46,7 @@
   box-shadow: var(--shadow-lg);
 }
 
-*:has(.card) {
+*:has(> .card) {
   container-type: inline-size;
 }
 

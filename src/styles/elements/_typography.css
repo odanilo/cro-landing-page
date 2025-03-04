@@ -8,7 +8,12 @@ body {
 }
 
 a {
+  color: var(--color-primary-brand);
   transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+}
+
+a:hover {
+  color: var(--color-primary-500);
 }
 
 h1,
@@ -46,8 +51,8 @@ h5 {
 
 @media (min-width: 48rem) {
   .page-title {
-    font-size: var(--text-6xl);
-    line-height: var(--text-6xl--line-height);
+    font-size: var(--text-7xl);
+    line-height: var(--text-7xl--line-height);
   }
 
   .section-title {
