@@ -40,6 +40,10 @@ h5 {
   padding-left: 0;
 }
 
+.text-center {
+  text-align: center;
+}
+
 @media (min-width: 48rem) {
   .page-title {
     font-size: var(--text-6xl);
