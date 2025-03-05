@@ -90,7 +90,7 @@
   font-display: swap;
   font-family: 'Circuit Outline';
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
 
   src: local('Circuit Outline'), local('CircuitOutline'),
     url('../../fonts/circuit/CircuitOutline.woff2') format('woff2'),
@@ -101,7 +101,7 @@
   font-display: swap;
   font-family: 'Circuit';
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
 
   src: local('Circuit'),
     url('../../fonts/circuit/Circuit.woff2') format('woff2'),
