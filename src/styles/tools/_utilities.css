@@ -13,3 +13,8 @@
 .hidden {
   display: none !important;
 }
+
+.inset {
+  inset: 0;
+  position: absolute;
+}
