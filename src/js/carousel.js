@@ -12,7 +12,9 @@ function createPaginationButton(isActive = false) {
 }
 export class Carousel {
   constructor(wrapperNode) {
-    this.sectionContainer = document.querySelector('[data-js="articles"]');
+    this.sectionContainer = document.querySelector(
+      '[data-js="articles-slide"]'
+    );
     this.carousel = wrapperNode;
     this.desktopBreakpoint = 768;
     this.isDesktop = this.carousel.clientWidth >= this.desktopBreakpoint;
