@@ -137,6 +137,7 @@ button[disabled] {
 .btn-tertiary {
   background-color: transparent;
   border-radius: var(--border-radius-xs);
+  color: var(--color-black);
   padding: 0.5rem;
   text-decoration: underline;
 }
