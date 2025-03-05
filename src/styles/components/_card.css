@@ -1,6 +1,7 @@
 .card-grid {
   display: grid;
   grid-gap: var(--card-grid-gap, var(--spacing-4xl));
+
   grid-template-columns: repeat(
     auto-fit,
     minmax(var(--min-card-width, 192px), 1fr)
@@ -53,9 +54,9 @@
 @container (min-width: 30rem) {
   .card {
     align-items: center;
+    column-gap: var(--spacing-base);
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    column-gap: var(--spacing-base);
     width: 100%;
   }
 

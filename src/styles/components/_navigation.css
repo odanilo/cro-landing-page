@@ -45,10 +45,10 @@ body:has(.hamburger-icon[aria-expanded='true']) {
   right: 0;
   top: 100%;
   transform: translate(0, -2%);
-  transition: transform 0.2s ease-in, visibility 0.2s ease-in,
-    opacity 0.2s ease-in;
   visibility: hidden;
   z-index: 1;
+  transition: transform 0.2s ease-in, visibility 0.2s ease-in,
+    opacity 0.2s ease-in;
 }
 
 .menu__pages:has(+ .nav__actions .hamburger-icon[aria-expanded='true']) {
@@ -62,8 +62,8 @@ body:has(.hamburger-icon[aria-expanded='true']) {
 }
 
 .menu-pages__item + .menu-pages__item::before {
-  content: '';
   border-top: solid 1px var(--color-gray-50);
+  content: '';
   left: var(--container-px);
   position: absolute;
   right: var(--container-px);
@@ -103,11 +103,11 @@ body:has(.hamburger-icon[aria-expanded='true']) {
   display: flex;
   flex-direction: column;
   gap: 0.3125rem;
-  justify-content: center;
   height: 1rem;
-  width: 1.125rem;
+  justify-content: center;
   padding: 0;
   position: relative;
+  width: 1.125rem;
 }
 
 .hamburger-icon[aria-expanded='true'] {
@@ -174,15 +174,15 @@ body:has(.hamburger-icon[aria-expanded='true']) {
     align-self: stretch;
     background-color: transparent;
     display: flex;
-    font-size: var(--text-sm);
     flex-wrap: wrap;
+    font-size: var(--text-sm);
     height: unset;
     margin-left: auto;
     opacity: 1;
     position: relative;
     top: unset;
-    transition: none;
     transform: translate(0, 0);
+    transition: none;
     visibility: visible;
   }
 

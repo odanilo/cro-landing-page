@@ -1,6 +1,6 @@
 .logo-picker {
-  overflow: hidden;
   --list-x-offset: 0;
+  overflow: hidden;
 }
 
 .logo-picker__list {

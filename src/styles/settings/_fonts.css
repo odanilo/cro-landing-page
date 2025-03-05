@@ -1,99 +1,109 @@
 @font-face {
+  font-display: fallback;
   font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: normal;
+
   src: local('TT Norms Regular'), local('TTNorms-Regular'),
     url('../../fonts/tt-norms/TTNorms-Regular.woff2') format('woff2'),
     url('../../fonts/tt-norms/TTNorms-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: fallback;
 }
 
 @font-face {
+  font-display: fallback;
   font-family: 'TT Norms';
+  font-style: italic;
+  font-weight: 500;
+
   src: local('TT Norms Medium Italic'), local('TTNorms-MediumItalic'),
     url('../../fonts/tt-norms/TTNorms-MediumItalic.woff2') format('woff2'),
     url('../../fonts/tt-norms/TTNorms-MediumItalic.woff') format('woff');
-  font-weight: 500;
-  font-style: italic;
-  font-display: fallback;
 }
 
 @font-face {
+  font-display: fallback;
   font-family: 'TT Norms';
+  font-style: italic;
+  font-weight: normal;
+
   src: local('TT Norms Italic'), local('TTNorms-Italic'),
     url('../../fonts/tt-norms/TTNorms-Italic.woff2') format('woff2'),
     url('../../fonts/tt-norms/TTNorms-Italic.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
-  font-display: fallback;
 }
 
 @font-face {
+  font-display: fallback;
   font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 500;
+
   src: local('TT Norms Medium'), local('TTNorms-Medium'),
     url('../../fonts/tt-norms/TTNorms-Medium.woff2') format('woff2'),
     url('../../fonts/tt-norms/TTNorms-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: fallback;
 }
 
 @font-face {
+  font-display: fallback;
   font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: bold;
+
   src: local('TT Norms ExtraBold'), local('TTNorms-ExtraBold'),
     url('../../fonts/tt-norms/TTNorms-ExtraBold.woff2') format('woff2'),
     url('../../fonts/tt-norms/TTNorms-ExtraBold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: fallback;
 }
 
 @font-face {
+  font-display: fallback;
   font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: bold;
+
   src: local('TT Norms Bold'), local('TTNorms-Bold'),
     url('../../fonts/tt-norms/TTNorms-Bold.woff2') format('woff2'),
     url('../../fonts/tt-norms/TTNorms-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: fallback;
 }
 
 @font-face {
+  font-display: fallback;
   font-family: 'TT Norms';
+  font-style: italic;
+  font-weight: bold;
+
   src: local('TT Norms Bold Italic'), local('TTNorms-BoldItalic'),
     url('../../fonts/tt-norms/TTNorms-BoldItalic.woff2') format('woff2'),
     url('../../fonts/tt-norms/TTNorms-BoldItalic.woff') format('woff');
-  font-weight: bold;
-  font-style: italic;
-  font-display: fallback;
 }
 
 @font-face {
+  font-display: fallback;
   font-family: 'TT Norms';
+  font-style: italic;
+  font-weight: bold;
+
   src: local('TT Norms ExtraBold Italic'), local('TTNorms-ExtraBoldItalic'),
     url('../../fonts/tt-norms/TTNorms-ExtraBoldItalic.woff2') format('woff2'),
     url('../../fonts/tt-norms/TTNorms-ExtraBoldItalic.woff') format('woff');
-  font-weight: bold;
-  font-style: italic;
-  font-display: fallback;
 }
 
 @font-face {
+  font-display: fallback;
   font-family: 'Circuit Outline';
+  font-style: normal;
+  font-weight: normal;
+
   src: local('Circuit Outline'), local('CircuitOutline'),
     url('../../fonts/circuit/CircuitOutline.woff2') format('woff2'),
     url('../../fonts/circuit/CircuitOutline.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: fallback;
 }
 
 @font-face {
+  font-display: fallback;
   font-family: 'Circuit';
+  font-style: normal;
+  font-weight: normal;
+
   src: local('Circuit'),
     url('../../fonts/circuit/Circuit.woff2') format('woff2'),
     url('../../fonts/circuit/Circuit.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: fallback;
 }
