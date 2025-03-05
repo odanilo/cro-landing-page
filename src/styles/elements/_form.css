@@ -43,6 +43,13 @@ form textarea {
   resize: vertical;
 }
 
+form input[type='text']:where(:focus, :focus-visible),
+form input[type='search']:where(:focus, :focus-visible),
+form input[type='email']:where(:focus, :focus-visible),
+form input[type='password']:where(:focus, :focus-visible),
+form input[type='tel']:where(:focus, :focus-visible),
+form input[type='number']:where(:focus, :focus-visible),
+form input[type='file']:where(:focus, :focus-visible),
 form input:where(:focus, :focus-visible),
 form select:where(:focus, :focus-visible),
 form textarea:where(:focus, :focus-visible) {

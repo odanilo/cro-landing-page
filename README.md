@@ -26,14 +26,27 @@ A responsive landing page developed as a technical challenge, converting a Figma
 - Keyboard navigation support
 - Screen reader optimization
 
-### Design System Highlights
+### Design System ([View the mini "design system"](https://classpass-pickleball.netlify.app/pages/sign-up))
 
+  ![alt text](image-1.png)
+
+Used design tokens into a strategic tool for consistency, scalability, and efficiency. By centralizing design decisions, we create a flexible framework that enables rapid iteration, maintains visual harmony, and provides a single source of truth for designers and developers.
+
+| Category          | Variables                                         | Benefits                                                                                              |
+| ----------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| **Color Palette** | `--color-primary-brand`, `--color-gray-*`         | - Consistent branding<br>- Easy global color updates<br>- OKLCH color model for perceptual uniformity |
+| **Spacing**       | `--spacing-*`                                     | - Consistent rhythm<br>- Predictable layout<br>- Rapid design iterations                              |
+| **Typography**    | `--font-sans`, `--font-title`<br>`--text-*` sizes | - Typographic hierarchy<br>- Responsive typography<br>- Font stack fallbacks                          |
+| **Border Radius** | `--border-radius-*`                               | - Consistent component corners<br>- Design system cohesion                                            |
+| **Shadows**       | `--shadow-base`, `--shadow-lg`                    | - Depth and hierarchy<br>- Consistent elevation effects                                               |
+### Besides that:
 - Custom CSS variables for consistent theming
 - Utility classes following BEM methodology
 - Grid system inspired by Bootstrap for easy collaboration
 - Component-level design system with reusable styles
-  ![alt text](image-1.png)
-  [View the mini "design system"](https://classpass-pickleball.netlify.app/pages/sign-up)
+
+
+  
 
 ## 💻 Technologies Used
 
