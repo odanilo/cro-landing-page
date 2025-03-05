@@ -46,7 +46,9 @@ form textarea {
 form input:where(:focus, :focus-visible),
 form select:where(:focus, :focus-visible),
 form textarea:where(:focus, :focus-visible) {
+  border-color: transparent;
   outline-color: var(--color-primary-500);
+  outline-width: var(--outline-width-base);
 }
 
 form label {
@@ -59,23 +61,12 @@ form label {
 }
 
 .float-label {
+  background: var(--label-bg, var(--color-white));
   left: var(--spacing-xs);
   padding: 0 0.125rem;
   position: absolute;
   top: 0;
   transform: translate(0, -50%);
-}
-
-.float-label:before {
-  background: var(--label-bg, var(--color-white));
-  content: '';
-  display: block;
-  height: 1px;
-  left: 0;
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  z-index: -1;
 }
 
 *:focus-within > .float-label:before {
@@ -134,6 +125,7 @@ form select {
   background-position: right 10px center;
   background-repeat: no-repeat;
   background-size: 16px;
+  color: var(--color-black);
   padding-right: 30px;
 }
 

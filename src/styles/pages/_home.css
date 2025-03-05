@@ -1,3 +1,7 @@
+:root {
+  scroll-behavior: smooth;
+}
+
 /****** HERO SECTION ******/
 .hero-lp {
   position: relative;
@@ -190,12 +194,18 @@
   margin-top: var(--spacing-4xl);
 }
 
+.sponsors__item {
+  animation: subtleFadeSlideUp 0.4s ease-out;
+}
+
+
 .sponsors__content {
   margin-top: var(--spacing-4xl);
 }
 
 .sponsors-card__feature {
   aspect-ratio: 353 / 238;
+  background-color: var(--color-gray-50);
 }
 
 @container (min-width: 40rem) {
@@ -271,5 +281,16 @@
 
   .articles__list {
     gap: var(--spacing-4xl);
+  }
+}
+
+@keyframes subtleFadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(var(--spacing-base));
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

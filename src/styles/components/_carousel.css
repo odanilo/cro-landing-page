@@ -66,6 +66,10 @@
   width: 2.5rem;
 }
 
+.carousel-controls-btn:hover {
+  background-color: var(--color-brand-sky);
+}
+
 .carousel-controls-btn[disabled] {
   background-color: var(--color-gray-50);
   box-shadow: none;

@@ -34,4 +34,15 @@ export function createNavigation(menuSelector = '[data-js="menu"]') {
   };
 
   $menuControl.addEventListener('click', toggleNavigation);
+  $menu.addEventListener('click', (e) => {
+    if (
+      e.target.dataset.js === 'menu' ||
+      e.target.dataset.js === 'main-navigation'
+    ) {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
+  });
 }

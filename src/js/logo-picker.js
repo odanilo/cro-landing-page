@@ -39,6 +39,17 @@ function createLogoObserver(onLogoExit) {
   );
 }
 
+function createLogoContainerObserver(onContainerExit) {
+  return new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        onContainerExit(entry.isIntersecting);
+      });
+    },
+    { root: null, threshold: 0.0 }
+  );
+}
+
 export function createLogoPicker(selector = '[data-js="logo-picker"]') {
   const { $list, $section } = getLogoPickerNodeElements(selector);
 
@@ -52,6 +63,10 @@ export function createLogoPicker(selector = '[data-js="logo-picker"]') {
   };
 
   const logoObserver = createLogoObserver(handleLogoExit);
+  const logoContainerObserver = createLogoContainerObserver((isOnScreen) => {
+    state.shouldAnimate = isOnScreen;
+    animateScroll();
+  });
 
   function removeLogoAfterLeaveScreen(nodeLogo) {
     state.currentX += nodeLogo.clientWidth + state.gap;
@@ -98,5 +113,6 @@ export function createLogoPicker(selector = '[data-js="logo-picker"]') {
     logoObserver.observe(logo);
   });
 
+  logoContainerObserver.observe($section);
   requestAnimationFrame(animateScroll);
 }
