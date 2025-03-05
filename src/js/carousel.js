@@ -12,6 +12,7 @@ function createPaginationButton(isActive = false) {
 }
 export class Carousel {
   constructor(wrapperNode) {
+    this.sectionContainer = document.querySelector('[data-js="articles"]');
     this.carousel = wrapperNode;
     this.desktopBreakpoint = 768;
     this.isDesktop = this.carousel.clientWidth >= this.desktopBreakpoint;
@@ -187,21 +188,31 @@ export class Carousel {
   }
 
   initSwipeEvents() {
-    this.carousel.addEventListener(
+    this.sectionContainer.addEventListener(
       'touchstart',
       this.handleTouchStart.bind(this)
     );
-    this.carousel.addEventListener('touchend', this.handleTouchEnd.bind(this));
+    this.sectionContainer.addEventListener(
+      'touchend',
+      this.handleTouchEnd.bind(this)
+    );
 
-    this.carousel.addEventListener(
+    this.sectionContainer.addEventListener(
       'mousedown',
       this.handleTouchStart.bind(this)
     );
-    this.carousel.addEventListener('mouseup', this.handleTouchEnd.bind(this));
+    this.sectionContainer.addEventListener(
+      'mouseup',
+      this.handleTouchEnd.bind(this)
+    );
 
-    this.carousel.addEventListener('touchmove', (e) => e.preventDefault(), {
-      passive: false,
-    });
+    this.sectionContainer.addEventListener(
+      'touchmove',
+      (e) => e.preventDefault(),
+      {
+        passive: false,
+      }
+    );
   }
 
   handleTouchStart(event) {

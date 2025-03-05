@@ -41,6 +41,7 @@ class Dropdown {
     this.dropdown.addEventListener('change', () => {
       this.setIsOpen(false);
       this.setActualValue();
+      this.dropdown.focus();
     });
 
     this.dropdown.addEventListener('blur', () => {
