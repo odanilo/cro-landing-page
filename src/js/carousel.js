@@ -207,14 +207,6 @@ export class Carousel {
       'mouseup',
       this.handleTouchEnd.bind(this)
     );
-
-    this.sectionContainer.addEventListener(
-      'touchmove',
-      (e) => e.preventDefault(),
-      {
-        passive: false,
-      }
-    );
   }
 
   handleTouchStart(event) {
