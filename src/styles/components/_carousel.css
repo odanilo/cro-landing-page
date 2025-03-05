@@ -1,0 +1,85 @@
+.carousel-section {
+  overflow: clip;
+}
+
+.carousel-wrapper {
+  position: relative;
+}
+
+.carousel-container {
+  transform: translate(var(--carousel-offset, 0), 0);
+  transition: transform 0.3s ease-out;
+}
+
+.carousel__pagination {
+  display: flex;
+  gap: var(--spacing-2xs);
+  justify-content: center;
+}
+
+.carousel-pagination__item {
+  background-color: var(--color-black);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-flex;
+  height: var(--spacing-2xs);
+  opacity: 0.2;
+  padding: 0;
+  transition: opactiy 0.3s ease-in-out;
+  width: var(--spacing-2xs);
+  will-change: opacity;
+}
+
+.carousel-pagination__item:where(:hover, :focus, :focus-visible) {
+  opacity: 0.4;
+}
+
+.carousel-pagination__item--is-active {
+  opacity: 1;
+}
+
+.carousel-controls {
+  display: none;
+  justify-content: space-between;
+  left: calc((var(--container-px) * 3) * -1);
+  position: absolute;
+  top: calc(50% - (var(--spacing-2xs) + var(--spacing-4xl)) / 2);
+  transform: translate(0, -50%);
+  width: calc(100% + (var(--container-px) * 6));
+  z-index: 1;
+}
+
+.carousel-controls-btn {
+  align-items: center;
+  background-color: var(--color-white);
+  border: solid 1px var(--color-gray-100);
+  border-radius: 50%;
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 0;
+  height: 2.5rem;
+  justify-content: center;
+  padding: 0;
+  position: relative;
+  width: 2.5rem;
+}
+
+.carousel-controls-btn[disabled] {
+  background-color: var(--color-gray-50);
+  box-shadow: none;
+  color: var(--color-gray-400);
+}
+
+.carousel-controls-btn svg {
+  width: var(--spacing-2xs);
+}
+
+.carousel-controls-btn__prev svg {
+  transform: translate(-5%, 0);
+}
+
+.carousel-controls-btn__next svg {
+  transform: translate(5%, 0);
+}

@@ -501,7 +501,7 @@
                 <article class="card" aria-labelledby="sponsors-card-title-1">
                   <div class="card__image-wrapper">
                     <img
-                      class="card__featured-image"
+                      class="sponsors-card__feature card__featured-image"
                       src="./images/sponsors/sponsors-featured-01.jpg"
                       alt="An aerial shot of Sip & Pickle - Pickleball Social Club, featuring multiple blue and gray pickleball courts, palm trees, and colorful murals"
                       loading="lazy"
@@ -536,7 +536,7 @@
                 <article class="card" aria-labelledby="sponsors-card-title-2">
                   <div class="card__image-wrapper">
                     <img
-                      class="card__featured-image"
+                      class="sponsors-card__feature card__featured-image"
                       src="./images/sponsors/sponsors-featured-02.jpg"
                       alt="Three bottles of Pressed Juicery juices – red, orange, and green – arranged with fresh produce like kale, a beet, and a lemon on a textured surface."
                       loading="lazy"
@@ -573,7 +573,7 @@
                 <article class="card" aria-labelledby="sponsors-card-title-3">
                   <div class="card__image-wrapper">
                     <img
-                      class="card__featured-image"
+                      class="sponsors-card__feature card__featured-image"
                       src="./images/sponsors/sponsors-featured-03.jpg"
                       alt="A young woman wearing a SET outfit that's perfect for both relaxing at home and workout."
                       loading="lazy"
@@ -603,6 +603,244 @@
               </div>
             </div>
           </main>
+        </div>
+      </section>
+
+      <section
+        id="articles"
+        class="articles carousel-section section"
+        aria-labelledby="articles-heading"
+      >
+        <div class="articles-wrapper container">
+          <header class="col-md-12 container articles__header flow">
+            <h2 id=" articles-heading" class="col-md-12 section-title">
+              Pickleball in the spotlight
+            </h2>
+
+            <p class="col-md-12">
+              Pickleball is the fastest growing sport globally, increasing in
+              popularity 445% YoY. Here’s what people have to say about
+              pickleball in the news:
+            </p>
+          </header>
+
+          <div
+            class="col-md-12 articles__carousel carousel-wrapper"
+            data-js="articles-slide"
+          >
+            <div class="carousel-controls">
+              <button
+                data-js="carousel-prev-btn"
+                class="carousel-controls-btn carousel-controls-btn__prev"
+                disabled
+              >
+                <svg
+                  viewBox="0 0 8 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M7.33564 0.337087C7.70176 0.703204 7.70176 1.2968 7.33564 1.66291L2.99855 6L7.33564 10.3371C7.70176 10.7032 7.70176 11.2968 7.33564 11.6629C6.96953 12.029 6.37593 12.029 6.00982 11.6629L1.00982 6.66291C0.6437 6.2968 0.6437 5.7032 1.00982 5.33709L6.00982 0.337087C6.37593 -0.0290291 6.96953 -0.0290291 7.33564 0.337087Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+
+              <button
+                data-js="carousel-next-btn"
+                class="carousel-controls-btn carousel-controls-btn__next"
+              >
+                <svg
+                  viewBox="0 0 8 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.26006 0.337087C0.893944 0.703204 0.893944 1.2968 1.26006 1.66291L5.59715 6L1.26006 10.3371C0.893944 10.7032 0.893944 11.2968 1.26006 11.6629C1.62618 12.029 2.21977 12.029 2.58589 11.6629L7.58589 6.66291C7.952 6.2968 7.952 5.7032 7.58589 5.33709L2.58589 0.337087C2.21977 -0.0290291 1.62618 -0.0290291 1.26006 0.337087Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <ul
+              class="articles__list carousel-container no-list"
+              data-js="carousel-container"
+            >
+              <li class="articles__item" data-js="carousel-item">
+                <article
+                  class="card card--has-bg card--has-shadow"
+                  aria-labelledby="articles-card-title-1"
+                >
+                  <div class="card__image-wrapper">
+                    <figure>
+                      <img
+                        class="card__featured-image"
+                        src="./images/press/press-image-01.jpg"
+                        alt="Sports & Rec Weekly"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </div>
+
+                  <div class="card__content">
+                    <blockquote class="flow" cite="classpass.com">
+                      <h3 id="articles-card-title-1" class="card__title">
+                        "The fastest-growing sport in America is no longer just
+                        a trend—it’s a movement."
+                      </h3>
+
+                      <footer>
+                        <cite>—Sports & Rec Weekly</cite>
+                      </footer>
+                    </blockquote>
+                  </div>
+
+                  <div class="col-md-12 card__footer">
+                    <a
+                      href="#"
+                      class="card__link"
+                      aria-describedby="card-title-1"
+                    >
+                      Read more
+                    </a>
+                  </div>
+                </article>
+              </li>
+
+              <li class="articles__item" data-js="carousel-item">
+                <article
+                  class="card card--has-bg card--has-shadow"
+                  aria-labelledby="articles-card-title-2"
+                >
+                  <div class="card__image-wrapper">
+                    <figure>
+                      <img
+                        class="card__featured-image"
+                        src="./images/press/press-image-02.jpg"
+                        alt="Game ON"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </div>
+
+                  <div class="card__content">
+                    <blockquote class="flow" cite="classpass.com">
+                      <h3 id="articles-card-title-2" class="card__title">
+                        "Pickleball is blending competition and community like
+                        no other sport right now."
+                      </h3>
+
+                      <footer>
+                        <cite>—GameOn Magazine</cite>
+                      </footer>
+                    </blockquote>
+                  </div>
+
+                  <div class="col-md-12 card__footer">
+                    <a
+                      href="#"
+                      class="card__link"
+                      aria-describedby="card-title-1"
+                    >
+                      Read more
+                    </a>
+                  </div>
+                </article>
+              </li>
+
+              <li class="articles__item" data-js="carousel-item">
+                <article
+                  class="card card--has-bg card--has-shadow"
+                  aria-labelledby="articles-card-title-3"
+                >
+                  <div class="card__image-wrapper">
+                    <figure>
+                      <img
+                        class="card__featured-image"
+                        src="./images/press/press-image-03.jpg"
+                        alt="Athlete’s Edge"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </div>
+
+                  <div class="card__content">
+                    <blockquote class="flow" cite="classpass.com">
+                      <h3 id="articles-card-title-3" class="card__title">
+                        "The sport that went viral is now a national
+                        obsession—everyone is picking up a paddle."
+                      </h3>
+
+                      <footer>
+                        <cite>—Athlete’s Edge</cite>
+                      </footer>
+                    </blockquote>
+                  </div>
+
+                  <div class="col-md-12 card__footer">
+                    <a
+                      href="#"
+                      class="card__link"
+                      aria-describedby="card-title-1"
+                    >
+                      Read more
+                    </a>
+                  </div>
+                </article>
+              </li>
+
+              <li class="articles__item" data-js="carousel-item">
+                <article
+                  class="card card--has-bg card--has-shadow"
+                  aria-labelledby="articles-card-title-4"
+                >
+                  <div class="card__image-wrapper">
+                    <figure>
+                      <img
+                        class="card__featured-image"
+                        src="./images/press/press-image-04.jpg"
+                        alt="NextGen Sports"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </div>
+
+                  <div class="card__content">
+                    <blockquote class="flow" cite="classpass.com">
+                      <h3 id="articles-card-title-4" class="card__title">
+                        "Fitness, fun, and friendly rivalries—pickleball is
+                        officially here to stay.
+                      </h3>
+
+                      <footer>
+                        <cite>—NextGen Sports</cite>
+                      </footer>
+                    </blockquote>
+                  </div>
+
+                  <div class="col-md-12 card__footer">
+                    <a
+                      href="#"
+                      class="card__link"
+                      aria-describedby="card-title-1"
+                    >
+                      Read more
+                    </a>
+                  </div>
+                </article>
+              </li>
+            </ul>
+
+            <div
+              class="articles__pagination carousel__pagination"
+              data-js="carousel-pagination"
+            ></div>
+          </div>
         </div>
       </section>
     </main>
