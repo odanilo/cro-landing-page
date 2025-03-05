@@ -86,6 +86,25 @@ export function createLogoPicker(selector = '[data-js="logo-picker"]') {
     addNewLogoOnList(clonedLogo);
   }
 
+  function shouldFillLogobar() {
+    return (
+      window.innerWidth -
+        document.querySelector('[data-js="logo-picker-list"] > *:last-child')
+          .offsetLeft >=
+      0
+    );
+  }
+
+  function fillLogobar() {
+    if (!shouldFillLogobar()) return;
+
+    state.initialLogos.forEach((initialLogo) =>
+      $list.appendChild(initialLogo.cloneNode(true))
+    );
+
+    fillLogobar();
+  }
+
   function animateScroll() {
     state.currentX -= OFFSET_AMOUNT;
 
@@ -113,6 +132,9 @@ export function createLogoPicker(selector = '[data-js="logo-picker"]') {
     logoObserver.observe(logo);
   });
 
+  window.addEventListener('resize', fillLogobar);
+
+  fillLogobar();
   logoContainerObserver.observe($section);
   requestAnimationFrame(animateScroll);
 }
