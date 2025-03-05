@@ -1,10 +1,10 @@
 # Figma Design for Coding Test | Pickleball Tournament
 
-![alt text](image.png)
+![alt text](image-4.png)
 
 ## Project Overview
 
-A responsive landing page developed as a technical challenge, converting a Figma design into a fully functional web experience using only HTML, CSS, and Vanilla JavaScript.
+A responsive landing page developed as a technical challenge, converting a Figma design into a fully functional page using only HTML, CSS, and vanilla JavaScript.
 
 ## 🚀 Live Demo
 
@@ -26,7 +26,7 @@ A responsive landing page developed as a technical challenge, converting a Figma
 - Keyboard navigation support
 - Screen reader optimization
 
-### Design System ([View the mini DS Reference](https://classpass-pickleball.netlify.app/pages/system-design))
+### Design System ([view the mini DS Reference](https://classpass-pickleball.netlify.app/pages/system-design))
 
 ![alt text](image-1.png)
 
@@ -43,9 +43,48 @@ Used design tokens into a strategic tool for consistency, scalability, and effic
 ### Besides that:
 
 - Custom CSS variables for consistent theming
-- Utility classes following BEM methodology
-- Grid system inspired by Bootstrap for easy collaboration
+- Utility classes alongside BEM methodology
+- Grid system inspired by bootstrap for easy collaboration
 - Component-level design system with reusable styles
+
+## 🧩 JavaScript Components
+
+### Tabs Component: Accessible and Keyboard-Friendly
+![alt text](image-2.png)
+#### Key Features
+
+- Full keyboard navigation support
+- ARIA attribute management
+- Dynamic tab and panel state handling
+- Circular tab navigation (wraps around edges)
+- Automatic initialization for multiple tab groups
+
+#### Accessibility Achievements
+
+- Supports screen readers
+- Implements keyboard navigation patterns
+- Manages focus and selection states
+- Ensures semantic HTML structure
+- Provides intuitive keyboard interactions
+
+### Carousel Component: Dynamic and Responsive Navigation
+![alt text](image-3.png)
+#### Key Features
+
+- Responsive design with adaptive items per page
+- Support for both desktop (3 items) and mobile (1 item) layouts -> can be customized for more breakpoints in the future
+- Advanced pagination and navigation controls
+- Touch and mouse swipe interactions
+- Dynamic offset calculations
+- Automatic breakpoint handling
+
+#### Technical Highlights
+
+- Uses CSS variables for smooth translations
+- Intelligent page and slide tracking
+- Comprehensive pagination management
+- Handles edge cases in multi-item layouts
+- Responsive resize event listener
 
 ## 💻 Technologies Used
 
