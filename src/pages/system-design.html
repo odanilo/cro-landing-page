@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="preload"
+      href="fonts/TTNorms-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/Circuit.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Design - CRO Landing Page | ClassPass</title>
+
+    <link rel="stylesheet" href="../styles/main.css" />
+
+    <style>
+      body {
+        padding: var(--section-py);
+      }
+
+      section {
+        background-color: var(--section-bg, var(--color-white));
+        padding: 3rem;
+        border-radius: var(--border-radius-base);
+        border: solid var(--color-gray-200) 1px;
+      }
+
+      section .section-title {
+        margin: 0 0 1.5rem 0;
+      }
+
+      .buttons-section {
+        align-items: flex-start;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .list-display {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .color-swatch {
+        border: var(--color-gray-50) solid 1px;
+        width: 128px;
+        height: 128px;
+        border-radius: 4px;
+        background-color: var(--swatch-color);
+      }
+
+      .label {
+        font-size: var(--text-xs);
+        --flow-spacing: 4px;
+      }
+
+      .container {
+        row-gap: 3rem;
+      }
+      .buttons-section + .buttons-section {
+        margin-top: 1.5rem;
+      }
+
+      .card-display {
+        width: 100%;
+        display: flex;
+        gap: 2rem;
+      }
+
+      .card-display > * {
+        flex: 1;
+      }
+
+      .card-display {
+        margin-top: 1.5rem;
+      }
+
+      .text-display {
+        line-height: 3rem;
+      }
+    </style>
+  </head>
+  <body class="system-design-page">
+    <div class="container">
+      <!-- Colors -->
+      <section class="col-md-12">
+        <h2 class="section-title">Colors</h2>
+        <ul class="list-display no-list">
+          <li class="flow">
+            <div
+              class="color-swatch"
+              style="--swatch-color: var(--color-black)"
+            ></div>
+            <p class="label">var(--color-black)</p>
+          </li>
+          <li class="flow">
+            <div
+              class="color-swatch"
+              style="--swatch-color: var(--color-white)"
+            ></div>
+            <p class="label">var(--color-white)</p>
+          </li>
+
+          <li class="flow">
+            <div
+              class="color-swatch"
+              style="--swatch-color: var(--color-primary-brand)"
+            ></div>
+            <p class="label">var(--color-primary-brand)</p>
+          </li>
+          <li class="flow">
+            <div
+              class="color-swatch"
+              style="--swatch-color: var(--color-primary-500)"
+            ></div>
+            <p class="label">var(--color-primary-500)</p>
+          </li>
+          <li class="flow">
+            <div
+              class="color-swatch"
+              style="--swatch-color: var(--color-brand-sky)"
+            ></div>
+            <p class="label">var(--color-brand-sky)</p>
+          </li>
+          <li class="flow">
+            <div
+              class="color-swatch"
+              style="--swatch-color: var(--color-brand-sky-500)"
+            ></div>
+            <p class="label">var(--color-brand-sky-500)</p>
+          </li>
+          <li class="flow">
+            <div
+              class="color-swatch"
+              style="--swatch-color: var(--color-gray-10)"
+            ></div>
+            <p class="label">var(--color-gray-10)</p>
+          </li>
+          <li class="flow">
+            <div
+              class="color-swatch"
+              style="--swatch-color: var(--color-gray-50)"
+            ></div>
+            <p class="label">var(--color-gray-50)</p>
+          </li>
+          <li class="flow">
+            <div
+              class="color-swatch"
+              style="--swatch-color: var(--color-gray-100)"
+            ></div>
+            <p class="label">var(--color-gray-100)</p>
+          </li>
+          <li class="flow">
+            <div
+              class="color-swatch"
+              style="--swatch-color: var(--color-gray-200)"
+            ></div>
+            <p class="label">var(--color-gray-200)</p>
+          </li>
+          <li class="flow">
+            <div
+              class="color-swatch"
+              style="--swatch-color: var(--color-gray-250)"
+            ></div>
+            <p class="label">var(--color-gray-250)</p>
+          </li>
+          <li class="flow">
+            <div
+              class="color-swatch"
+              style="--swatch-color: var(--color-gray-400)"
+            ></div>
+            <p class="label">var(--color-gray-400)</p>
+          </li>
+          <li class="flow">
+            <div
+              class="color-swatch"
+              style="--swatch-color: var(--color-gray-450)"
+            ></div>
+            <p class="label">var(--color-gray-450)</p>
+          </li>
+          <li class="flow">
+            <div
+              class="color-swatch"
+              style="--swatch-color: var(--color-gray-600)"
+            ></div>
+            <p class="label">var(--color-gray-600)</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Buttons -->
+      <section class="col-md-12">
+        <h2 class="section-title">Buttons</h2>
+
+        <section class="buttons-section">
+          <a type="button" class="btn btn-primary btn--is-navigation">
+            Button
+          </a>
+          <a type="button" class="btn btn-primary">Button</a>
+          <a type="button" class="btn btn-primary btn--is-full"> Button </a>
+          <a type="button" class="btn btn-primary" disabled>Button</a>
+        </section>
+
+        <section class="buttons-section">
+          <a type="button" class="btn btn-primary btn-primary--is-outline">
+            Button
+          </a>
+          <a
+            type="button"
+            class="btn btn-primary btn-primary--is-outline btn--is-full"
+          >
+            Button
+          </a>
+          <a
+            type="button"
+            class="btn btn-primary btn-primary--is-outline"
+            disabled
+          >
+            Button
+          </a>
+        </section>
+
+        <section class="buttons-section" style="background-color: #000">
+          <a type="button" class="btn btn-light">Button</a>
+          <a type="button" class="btn btn-light btn--is-full">Button</a>
+          <a type="button" class="btn btn-light" disabled>Button</a>
+        </section>
+
+        <section class="buttons-section" style="background-color: #000">
+          <a type="button" class="btn btn-light btn-light--is-outline">
+            Button
+          </a>
+          <a
+            type="button"
+            class="btn btn-light btn-light--is-outline btn--is-full"
+          >
+            Button
+          </a>
+          <a type="button" class="btn btn-light btn-light--is-outline" disabled>
+            Button
+          </a>
+        </section>
+
+        <section class="buttons-section">
+          <a type="button" class="btn btn-dark">Button</a>
+          <a type="button" class="btn btn-dark btn--is-full">Button</a>
+          <a type="button" class="btn btn-dark" disabled>Button</a>
+        </section>
+
+        <section class="buttons-section">
+          <a type="button" class="btn btn-dark btn-dark--is-outline">
+            Button
+          </a>
+          <a
+            type="button"
+            class="btn btn-dark btn-dark--is-outline btn--is-full"
+          >
+            Button
+          </a>
+          <a type="button" class="btn btn-dark btn-dark--is-outline" disabled>
+            Button
+          </a>
+        </section>
+
+        <section class="buttons-section">
+          <a type="button" class="btn btn-tertiary">Button</a>
+          <a type="button" class="btn btn-tertiary btn--is-full"> Button </a>
+          <a type="button" class="btn btn-tertiary" disabled>Button</a>
+        </section>
+
+        <section class="buttons-section" style="background-color: #000">
+          <a type="button" class="btn btn-tertiary btn-tertiary--is-dark">
+            Button
+          </a>
+          <a
+            type="button"
+            class="btn btn-tertiary btn-tertiary--is-dark btn--is-full"
+          >
+            Button
+          </a>
+          <a
+            type="button"
+            class="btn btn-tertiary btn-tertiary--is-dark"
+            disabled
+          >
+            Button
+          </a>
+        </section>
+      </section>
+
+      <!-- Cards -->
+      <section class="col-md-12">
+        <h2 class="section-title">Cards</h2>
+
+        <article class="card" aria-labelledby="card-title-1">
+          <div class="card__image-wrapper">
+            <a href="#">
+              <img
+                class="card__featured-image"
+                src="../images/what-expect/image-01.jpg"
+                alt="Description of the event or prize visual"
+                loading="lazy"
+              />
+            </a>
+          </div>
+
+          <div class="card__content">
+            <h3 id="card-title-1" class="card__title">
+              Exclusive event swag & prizes
+            </h3>
+
+            <div class="card__description">
+              <p>
+                Get limited-edition tournament gear and top prizes designed for
+                competitors who bring their best to the court.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <div class="card-display">
+          <div>
+            <article
+              class="card card--has-bg card--has-shadow"
+              aria-labelledby="card-title-1"
+            >
+              <div class="card__image-wrapper">
+                <a href="#">
+                  <img
+                    class="card__featured-image"
+                    src="../images/what-expect/image-01.jpg"
+                    alt="Description of the event or prize visual"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+
+              <div class="card__content">
+                <h3 id="card-title-1" class="card__title">
+                  Exclusive event swag & prizes
+                </h3>
+
+                <div class="card__description">
+                  <p>
+                    Get limited-edition tournament gear and top prizes designed
+                    for competitors who bring their best to the court.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card__footer">
+                <a href="#" class="card__link" aria-describedby="card-title-1">
+                  Read more
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div>
+            <article class="card" aria-labelledby="card-title-1">
+              <div class="card__image-wrapper">
+                <a href="#">
+                  <img
+                    class="card__featured-image"
+                    src="../images/what-expect/image-01.jpg"
+                    alt="Description of the event or prize visual"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+
+              <div class="card__content">
+                <h3 id="card-title-1" class="card__title">
+                  Exclusive event swag & prizes
+                </h3>
+
+                <div class="card__description">
+                  <p>
+                    Get limited-edition tournament gear and top prizes designed
+                    for competitors who bring their best to the court.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card__footer">
+                <a href="#" class="card__link" aria-describedby="card-title-1">
+                  Read more
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div>
+            <article class="card" aria-labelledby="card-title-1">
+              <div class="card__image-wrapper">
+                <a href="#">
+                  <img
+                    class="card__featured-image"
+                    src="../images/what-expect/image-01.jpg"
+                    alt="Description of the event or prize visual"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+
+              <div class="card__content">
+                <h3 id="card-title-1" class="card__title">
+                  Exclusive event swag & prizes
+                </h3>
+
+                <div class="card__description">
+                  <p>
+                    Get limited-edition tournament gear and top prizes designed
+                    for competitors who bring their best to the court.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Typography -->
+      <section class="col-md-12">
+        <h2 class="section-title">Typography</h2>
+
+        <section class="text-display">
+          <p class="page-title">Page title</p>
+          <p class="section-title">Section title</p>
+          <h1>Main Heading (H1)</h1>
+          <h2>Subheading (H2)</h2>
+          <h3>Section Title (H3)</h3>
+          <h4>Subsection (H4)</h4>
+          <h5>Smaller Heading (H5)</h5>
+          <h6>Minor Heading (H6)</h6>
+
+          <p>This is a paragraph of text.</p>
+          <p>This is a paragraph of text.</p>
+        </section>
+      </section>
+    </div>
+
+    <script type="module" src="../js/main.js"></script>
+  </body>
+</html>

@@ -19,12 +19,21 @@ A responsive landing page developed as a technical challenge, converting a Figma
 - **Responsive Design**: Fully responsive, with thoughtful layout adaptations
 - **Accessibility First**: Implemented ARIA labels and a11y best practices
 
+### 🔍 Accessibility Features
+
+- Comprehensive ARIA labeling
+- Semantic HTML structure
+- Keyboard navigation support
+- Screen reader optimization
+
 ### Design System Highlights
 
 - Custom CSS variables for consistent theming
 - Utility classes following BEM methodology
 - Grid system inspired by Bootstrap for easy collaboration
 - Component-level design system with reusable styles
+  ![alt text](image-1.png)
+  [View the mini "design system"](https://classpass-pickleball.netlify.app/pages/sign-up)
 
 ## 💻 Technologies Used
 
@@ -43,13 +52,6 @@ A responsive landing page developed as a technical challenge, converting a Figma
 - Mobile-first design
 - Fluid layouts
 - Container CSS
-
-## 🔍 Accessibility Features
-
-- Comprehensive ARIA labeling
-- Semantic HTML structure
-- Keyboard navigation support
-- Screen reader optimization
 
 ## 📦 Installation
 
