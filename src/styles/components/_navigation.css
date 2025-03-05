@@ -73,7 +73,7 @@ body:has(.hamburger-icon[aria-expanded='true']) {
 .menu-pages__link {
   color: var(--color-black);
   display: flex;
-  font-weight: 600;
+  font-weight: 500;
   padding: 1.25rem var(--container-px);
   position: relative;
   text-decoration: none;

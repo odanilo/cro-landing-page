@@ -1,5 +1,5 @@
 @font-face {
-  font-display: fallback;
+  font-display: swap;
   font-family: 'TT Norms';
   font-style: normal;
   font-weight: normal;
@@ -10,7 +10,7 @@
 }
 
 @font-face {
-  font-display: fallback;
+  font-display: swap;
   font-family: 'TT Norms';
   font-style: italic;
   font-weight: 500;
@@ -21,7 +21,7 @@
 }
 
 @font-face {
-  font-display: fallback;
+  font-display: swap;
   font-family: 'TT Norms';
   font-style: italic;
   font-weight: normal;
@@ -32,7 +32,7 @@
 }
 
 @font-face {
-  font-display: fallback;
+  font-display: swap;
   font-family: 'TT Norms';
   font-style: normal;
   font-weight: 500;
@@ -43,7 +43,7 @@
 }
 
 @font-face {
-  font-display: fallback;
+  font-display: swap;
   font-family: 'TT Norms';
   font-style: normal;
   font-weight: bold;
@@ -54,7 +54,7 @@
 }
 
 @font-face {
-  font-display: fallback;
+  font-display: swap;
   font-family: 'TT Norms';
   font-style: normal;
   font-weight: bold;
@@ -65,7 +65,7 @@
 }
 
 @font-face {
-  font-display: fallback;
+  font-display: swap;
   font-family: 'TT Norms';
   font-style: italic;
   font-weight: bold;
@@ -76,7 +76,7 @@
 }
 
 @font-face {
-  font-display: fallback;
+  font-display: swap;
   font-family: 'TT Norms';
   font-style: italic;
   font-weight: bold;
@@ -87,7 +87,7 @@
 }
 
 @font-face {
-  font-display: fallback;
+  font-display: swap;
   font-family: 'Circuit Outline';
   font-style: normal;
   font-weight: normal;
@@ -98,7 +98,7 @@
 }
 
 @font-face {
-  font-display: fallback;
+  font-display: swap;
   font-family: 'Circuit';
   font-style: normal;
   font-weight: normal;
