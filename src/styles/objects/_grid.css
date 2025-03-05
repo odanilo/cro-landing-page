@@ -27,6 +27,11 @@
   padding-right: var(--container-px);
 }
 
+.container .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .row {
   column-gap: var(--spacing-base);
   display: grid;

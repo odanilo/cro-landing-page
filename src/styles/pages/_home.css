@@ -262,7 +262,7 @@
 
 @media (min-width: 48rem) {
   .articles__header {
-    --max-width-container: 40.75rem;
+    --max-width-container: 37.75rem;
     text-align: center;
   }
 
