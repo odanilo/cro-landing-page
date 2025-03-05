@@ -35,6 +35,7 @@
   }
 
   .hero-lp__aside {
+    column-gap: var(--section-py);
     height: 100%;
     overflow: hidden;
     position: absolute;
@@ -45,6 +46,10 @@
     object-fit: cover;
     object-position: left top;
     width: 100%;
+  }
+
+  .hero-lp__main {
+    column-gap: var(--section-py);
   }
 
   .hero-lp__content {
