@@ -46,6 +46,7 @@ class Dropdown {
 
     this.dropdown.addEventListener('blur', () => {
       this.setIsOpen(false);
+      this.dropdown.focus();
     });
 
     this.dropdown.addEventListener('keydown', (event) => {

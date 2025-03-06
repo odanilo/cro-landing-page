@@ -12,7 +12,7 @@
 }
 
 .hero-lp__title {
-  font-size: clamp(var(--spacing-2xl), 3vw + 1rem, var(--text-7xl));
+  font-size: clamp(var(--text-4xl), 3vw + 1rem, var(--text-7xl));
 }
 
 .hero-lp__actions > * {
@@ -251,6 +251,10 @@
 
 .articles__item .card {
   height: 100%;
+}
+
+.articles__figure {
+  aspect-ratio: 706/350;
 }
 
 .articles__item cite {
