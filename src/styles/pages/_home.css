@@ -11,6 +11,10 @@
   padding-top: var(--spacing-4xl);
 }
 
+.hero-lp__title {
+  font-size: clamp(var(--spacing-2xl), 3vw + 1rem, var(--text-7xl));
+}
+
 .hero-lp__actions > * {
   display: flex;
   width: 100%;
@@ -35,7 +39,6 @@
   }
 
   .hero-lp__aside {
-    column-gap: var(--section-py);
     height: 100%;
     overflow: hidden;
     position: absolute;
@@ -48,19 +51,17 @@
     width: 100%;
   }
 
-  .hero-lp__main {
-    column-gap: var(--section-py);
-  }
-
   .hero-lp__content {
     order: -1;
     padding-top: var(--section-py);
+    padding-right: 8.17%;
     position: relative;
   }
 
   .hero-lp__aside-placeholder {
     aspect-ratio: 1338 / 1578;
     display: revert;
+    padding-left: 8.17%;
   }
 }
 
