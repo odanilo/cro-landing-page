@@ -29,24 +29,37 @@ class Dropdown {
     this.setIsOnPlaceholder();
   }
 
+  #focusDropdown() {
+    if (document.activeElement !== this.dropdown) {
+      this.dropdown.focus();
+    }
+  }
+
   init() {
     this.setActualValue();
     this.setIsOpen();
 
     this.dropdown.addEventListener('mousedown', () => {
       this.setIsOpen(true);
-      this.dropdown.focus();
+      this.#focusDropdown();
+    });
+
+    this.dropdown.addEventListener('pointerdown', () => {
+      this.setIsOpen(true);
+      this.#focusDropdown();
     });
 
     this.dropdown.addEventListener('change', () => {
       this.setIsOpen(false);
       this.setActualValue();
-      this.dropdown.focus();
+
+      if (document.activeElement !== this.dropdown) {
+        this.#focusDropdown();
+      }
     });
 
     this.dropdown.addEventListener('blur', () => {
       this.setIsOpen(false);
-      this.dropdown.focus();
     });
 
     this.dropdown.addEventListener('keydown', (event) => {
