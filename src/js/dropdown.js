@@ -31,6 +31,7 @@ class Dropdown {
 
   #focusDropdown() {
     if (document.activeElement !== this.dropdown) {
+      console.log('focando', this.dropdown);
       this.dropdown.focus();
     }
   }
@@ -52,10 +53,7 @@ class Dropdown {
     this.dropdown.addEventListener('change', () => {
       this.setIsOpen(false);
       this.setActualValue();
-
-      if (document.activeElement !== this.dropdown) {
-        this.#focusDropdown();
-      }
+      this.#focusDropdown();
     });
 
     this.dropdown.addEventListener('blur', () => {

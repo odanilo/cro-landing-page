@@ -45,7 +45,7 @@
 
 @media (min-width: 48rem) {
   .sp-form {
-    column-gap: var(--section-py);
+    column-gap: 8.17%;
     margin-top: var(--spacing-6xl);
   }
   .sp-form__header {
