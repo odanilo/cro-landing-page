@@ -9,6 +9,7 @@
 
 .hero-lp__content {
   padding-top: var(--spacing-4xl);
+  text-align: center;
 }
 
 .hero-lp__title {
@@ -56,6 +57,7 @@
     padding-right: 8.17%;
     padding-top: var(--section-py);
     position: relative;
+    text-align: left;
   }
 
   .hero-lp__aside-placeholder {

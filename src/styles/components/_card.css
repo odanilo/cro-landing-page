@@ -3,7 +3,7 @@
   grid-gap: var(--card-grid-gap, var(--spacing-4xl));
   grid-template-columns: repeat(
     auto-fit,
-    minmax(var(--min-card-width, 192px), 1fr)
+    minmax(var(--min-card-width, 16rem), 1fr)
   );
 }
 
@@ -25,6 +25,10 @@
   object-fit: cover;
   overflow: hidden;
   width: 100%;
+}
+
+.card__featured-image--align-right {
+  object-position: right center;
 }
 
 .card__content {
