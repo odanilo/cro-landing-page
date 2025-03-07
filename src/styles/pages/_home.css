@@ -53,8 +53,8 @@
 
   .hero-lp__content {
     order: -1;
-    padding-top: var(--section-py);
     padding-right: 8.17%;
+    padding-top: var(--section-py);
     position: relative;
   }
 
@@ -244,7 +244,7 @@
 }
 
 .articles__item {
-  align-self: screth;
+  align-self: stretch;
   flex-shrink: 0;
   width: 100%;
 }
@@ -271,21 +271,22 @@
 }
 
 @media (min-width: 48rem) {
+  .articles__carousel {
+    --peak-distance: var(--spacing-6xl);
+    margin-top: var(--spacing-6xl);
+  }
+
   .articles__header {
     --max-width-container: 37.75rem;
     text-align: center;
   }
 
   .articles__item {
-    width: calc(33.33% - var(--spacing-4xl));
+    width: calc(33.33% - var(--peak-distance));
   }
 
   .carousel-controls {
     display: flex;
-  }
-
-  .articles__carousel {
-    margin-top: var(--spacing-6xl);
   }
 
   .articles__list {

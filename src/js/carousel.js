@@ -1,5 +1,21 @@
 const PAGINATION_ACTIVE_CLASS = 'carousel-pagination__item--is-active';
 
+function getComputedValueInPixels(element, cssVariable) {
+  const value = getComputedStyle(element).getPropertyValue(cssVariable);
+
+  const temp = document.createElement('div');
+  temp.style.visibility = 'hidden';
+  temp.style.position = 'absolute';
+  temp.style.width = value;
+  document.body.appendChild(temp);
+
+  const pixels = temp.getBoundingClientRect().width;
+
+  document.body.removeChild(temp);
+
+  return pixels;
+}
+
 function createPaginationButton(isActive = false) {
   const btn = document.createElement('button');
   btn.classList.add('carousel-pagination__item');
@@ -10,6 +26,7 @@ function createPaginationButton(isActive = false) {
 
   return btn;
 }
+
 export class Carousel {
   constructor(wrapperNode) {
     this.sectionContainer = document.querySelector(
@@ -17,21 +34,29 @@ export class Carousel {
     );
     this.carousel = wrapperNode;
     this.desktopBreakpoint = 768;
-    this.isDesktop = this.carousel.clientWidth >= this.desktopBreakpoint;
+    this.isDesktop = null;
     this.items = [...wrapperNode.children];
+    this.gapSlides = 0;
     this.offsetPerItem = this.#calculateOffset(this.carousel);
-    this.itemsPerPage = this.isDesktop ? 3 : 1;
+    this.itemsPerPage = 1;
     this.offsetCssVariable = '--carousel-offset';
     this.currentSlide = 1;
     this.currentPage = 1;
     this.paginationContainer = document.querySelector(
       '[data-js="carousel-pagination"]'
     );
-    this.pages = Math.ceil(this.items.length / this.itemsPerPage);
+    this.pages = 0;
     this.prevBtn = document.querySelector('[data-js="carousel-prev-btn"]');
     this.nextBtn = document.querySelector('[data-js="carousel-next-btn"]');
     this.minSwipeDistance = 25;
-    this.gapSlides = parseFloat(getComputedStyle(this.carousel).gap);
+    this.desktopPeakDistance = 0;
+  }
+
+  #setDesktopPeakDistance() {
+    this.desktopPeakDistance = getComputedValueInPixels(
+      this.carousel,
+      '--peak-distance'
+    );
   }
 
   #setItemsPerPage() {
@@ -42,11 +67,13 @@ export class Carousel {
     this.gapSlides = parseFloat(getComputedStyle(this.carousel).gap);
   }
 
-  #setIsDesktop(isDesktop) {
-    if (this.isDesktop === isDesktop) return;
-    this.isDesktop = isDesktop;
+  #setIsDesktop() {
+    const newIsDesktop = window.innerWidth >= this.desktopBreakpoint;
+
+    if (this.isDesktop === newIsDesktop) return;
+
+    this.isDesktop = newIsDesktop;
     this.#updatePagesCalculation();
-    this.#setCurrentPage();
     this.#jumpToPage(this.currentPage);
   }
 
@@ -68,10 +95,11 @@ export class Carousel {
 
   #updatePagesCalculation() {
     this.#setGapSlides();
-    this.#setCurrentPage();
     this.#setItemsPerPage();
+    this.#setCurrentPage();
     this.#setPages();
     this.#createPagination();
+    this.#setDesktopPeakDistance();
   }
 
   #setCurrentSlide(slideNumber) {
@@ -87,42 +115,36 @@ export class Carousel {
     return firstSlide.clientWidth + this.gapSlides;
   }
 
-  #calculateTotalAmountToJump(slideNumber) {
+  #calculateTotalAmountToJump() {
     const offsetPerSlide = this.#calculateOffset();
-    const defaultAmountToJump = offsetPerSlide * (slideNumber - 1);
+    const offsetPerRow = offsetPerSlide * this.itemsPerPage;
+    const defaultAmountToJump = offsetPerRow * (this.currentPage - 1);
+    const isSingleRow = this.pages <= 1;
 
-    if (!this.#isLastPage() || this.pages <= 1 || this.itemsPerPage === 1) {
+    if (!this.#isLastPage() || isSingleRow || this.itemsPerPage === 1) {
       return defaultAmountToJump;
     }
 
     const slidesLeftToFillRow =
-      this.itemsPerPage - (this.items.length % this.itemsPerPage);
+      (this.itemsPerPage - (this.items.length % this.itemsPerPage)) %
+      this.itemsPerPage;
 
-    if (slidesLeftToFillRow === this.itemsPerPage) {
-      return defaultAmountToJump - this.gapSlides;
-    }
+    const amountNotNeedToJumpOnLastRow =
+      offsetPerSlide * slidesLeftToFillRow + this.desktopPeakDistance;
 
-    return (
-      defaultAmountToJump -
-      slidesLeftToFillRow * offsetPerSlide -
-      this.gapSlides
-    );
+    return defaultAmountToJump - amountNotNeedToJumpOnLastRow - this.gapSlides;
   }
 
   #jumpToSlide(slideNumber) {
     this.#setCurrentSlide(slideNumber);
-
-    this.carousel.style.setProperty(
-      this.offsetCssVariable,
-      `-${this.#calculateTotalAmountToJump(slideNumber)}px`
-    );
+    this.#moveSlidesOnScreen();
   }
 
   #jumpToPage(page) {
-    const shouldJumpToSlide =
-      page * this.itemsPerPage - (this.itemsPerPage - 1);
-
-    this.#jumpToSlide(shouldJumpToSlide);
+    const slidesUntilLastPage = (page - 1) * this.itemsPerPage;
+    const positionToLand = 1;
+    const slideToLand = slidesUntilLastPage + positionToLand;
+    this.#jumpToSlide(slideToLand);
   }
 
   #jumpToNextPage() {
@@ -136,6 +158,11 @@ export class Carousel {
     if (this.currentPage - 1 >= 1) {
       this.#jumpToPage(this.currentPage - 1);
     }
+  }
+
+  #moveSlidesOnScreen() {
+    const amountToJump = `-${this.#calculateTotalAmountToJump()}px`;
+    this.carousel.style.setProperty(this.offsetCssVariable, amountToJump);
   }
 
   #createPagination() {
@@ -232,13 +259,14 @@ export class Carousel {
   }
 
   init() {
-    this.#setCurrentPage();
+    this.#setIsDesktop();
+    this.#updatePagesCalculation();
     this.#createPagination();
     this.#createControls();
     this.initSwipeEvents();
 
     window.addEventListener('resize', () => {
-      this.#setIsDesktop(window.innerWidth >= this.desktopBreakpoint);
+      this.#setIsDesktop();
     });
   }
 }
