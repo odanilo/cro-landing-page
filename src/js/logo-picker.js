@@ -50,7 +50,7 @@ function createLogoContainerObserver(onContainerExit) {
   );
 }
 
-export function createLogoPicker(selector = '[data-js="logo-picker"]') {
+function createLogoPicker(selector = '[data-js="logo-picker"]') {
   const { $list, $section } = getLogoPickerNodeElements(selector);
 
   const OFFSET_AMOUNT = 0.25;
@@ -138,3 +138,5 @@ export function createLogoPicker(selector = '[data-js="logo-picker"]') {
   logoContainerObserver.observe($section);
   requestAnimationFrame(animateScroll);
 }
+
+createLogoPicker();

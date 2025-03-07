@@ -27,7 +27,7 @@ function createPaginationButton(isActive = false) {
   return btn;
 }
 
-export class Carousel {
+class Carousel {
   constructor(wrapperNode) {
     this.sectionContainer = document.querySelector(
       '[data-js="articles-slide"]'
@@ -270,3 +270,8 @@ export class Carousel {
     });
   }
 }
+
+const articlesCarousel = new Carousel(
+  document.querySelector('[data-js="carousel-container"]')
+);
+articlesCarousel.init();

@@ -135,13 +135,11 @@ class Tabs {
   }
 }
 
-export function createTabs() {
-  window.addEventListener('load', function () {
-    const tablists = document.querySelectorAll('[role=tablist]');
+window.addEventListener('load', function () {
+  const tablists = document.querySelectorAll('[role=tablist]');
 
-    for (const element of tablists) {
-      const tabs = new Tabs(element);
-      tabs.init();
-    }
-  });
-}
+  for (const element of tablists) {
+    const tabs = new Tabs(element);
+    tabs.init();
+  }
+});

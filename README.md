@@ -114,23 +114,12 @@ Used design tokens into a strategic tool for consistency, scalability, and effic
 # Clone the repository
 git clone https://github.com/odanilo/cro-landing-page
 
-# Navigate to the project directory
+# Open the project
 cd cro-landing-page
 
-# Important: This project uses ES6 Modules
-# You'll need to serve the project through a local server
+# No additional dependencies required
+# Open index.html in your browser
 ```
-
-🚨 This project uses `type="module"` for JavaScript imports. Due to browser security restrictions, you cannot simply open the `index.html` file directly. You'll need to:
-
-1. Use a local development server
-
-   - Recommended: VS Code's Live Server extension
-   - Alternative: Python's `http.server`
-   - Another option: `npx http-server`
-
-2. Ensure your server supports ES6 Modules
-   - Most modern development servers do this by default
 
 ## 📄 License
 

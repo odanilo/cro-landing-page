@@ -1,4 +1,4 @@
-export function createNavigation(menuSelector = '[data-js="menu"]') {
+function createNavigation(menuSelector = '[data-js="menu"]') {
   const $menu = document.querySelector(`${menuSelector}`);
 
   if (!$menu) {
@@ -46,3 +46,5 @@ export function createNavigation(menuSelector = '[data-js="menu"]') {
     }
   });
 }
+
+createNavigation();
